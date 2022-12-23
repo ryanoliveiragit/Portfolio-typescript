@@ -1,7 +1,7 @@
 import { Flex, Center, Text, Stack } from "@chakra-ui/react";
-import Header from "./components/header";
-import { Container } from "./components/layout";
-import SmallWithNavigation from './components/footer'
+import Header from '../components/header'
+import { Container } from "../components/layout";
+import SmallWithNavigation from '../components/footer'
 
 type Container = {
   children: JSX.Element;
