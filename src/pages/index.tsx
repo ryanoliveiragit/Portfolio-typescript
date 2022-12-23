@@ -16,7 +16,7 @@ export default function Home() {
           <Center w={"100%"} fontSize={43} justify-content={"space-around"}>
             <Stack alignContent={'center'} flexWrap={'wrap'} alignItems={'stretch'} w={'100%'} p={5} spacing={3}>
               <Text fontFamily={'Lexend'} fontWeight={'500'} className="gradient">
-                {'<Ryan Oliveira/>'}
+                {'Ryan Oliveira'}
               </Text>
               <Text fontSize="md" color={'white'}>
               Front-end Developer | Developer Instructor at Rocketseat
