@@ -24,6 +24,7 @@ export default function SmallWithNavigation() {
           <Link href={'#'}>Instagram</Link>
           <Link href={'#'}>github</Link>
           <Link href={'#'}>discord</Link>
+          <Link href={'#'}>discord</Link>
         </Stack>
       </Container>
     </Box>
