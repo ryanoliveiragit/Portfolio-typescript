@@ -52,6 +52,7 @@ body {
   color: white;
   padding: .5% 1%;
   font-size: 15px;
+  max-width: fit-content;
   font-weight: 600;
   text-align: start;
   border-radius: 5px;
