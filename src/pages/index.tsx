@@ -12,7 +12,7 @@ export default function Home() {
     <>
       <Container>
         <Header />
-        <Flex h={"83vh"} w={"83%"} bg={"#08070b"}>
+        <Flex h={"83vh"} w={"100%"} bg={"#08070b"}>
           <Center w={"100%"} fontSize={43} justify-content={"space-around"}>
             <Stack spacing={2}>
               <Text fontSize="5xl" fontWeight={700} className="gradient">
@@ -20,9 +20,9 @@ export default function Home() {
               </Text>
               <Text fontSize="lg" color={'white'}>
               Front-end Developer | @Viensoft.
-              </Text>
               <Text fontSize="lg" color={'gray.500'}>
                 Um programador sempre buscando mais conhecimentos!
+              </Text>
               </Text>
               <button className="buttonHome">
                 Pressione <kbd className="kbd">ctrl</kbd>{" "}
