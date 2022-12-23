@@ -1,9 +1,6 @@
 .rgb {
   color: aqua;
 }
-main {
-  background-color: red;
-}
 body {
   padding: 1% 5%;
   background-color:#08070b !important;
@@ -53,7 +50,7 @@ body {
 }
 .buttonHome {
   color: white;
-  padding: 2% 1%;
+  padding: .5% 1%;
   font-size: 15px;
   font-weight: 600;
   text-align: start;
