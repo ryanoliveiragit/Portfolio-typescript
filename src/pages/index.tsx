@@ -12,16 +12,16 @@ export default function Home() {
     <>
       <Container>
         <Header />
-        <Flex height={'75vh'} justify-content={'center'} w={"100%"} bg={"#08070b"}>
+        <Flex fontFamily={'Lexend'} height={'75vh'} justify-content={'center'} w={"100%"} bg={"#08070b"}>
           <Center w={"100%"} fontSize={43} justify-content={"space-around"}>
             <Stack alignContent={'center'} flexWrap={'wrap'} alignItems={'stretch'} w={'100%'} p={5} spacing={3}>
-              <Text fontWeight={700} className="gradient">
-                Ryan Oliveira
+              <Text fontFamily={'Lexend'} fontWeight={'500'} className="gradient">
+                {'<Ryan Oliveira/>'}
               </Text>
-              <Text fontSize="lg" color={'white'}>
-              Front-end Developer | @Viensoft.
-              <Text fontSize="lg" color={'gray.500'}>
-                Programador sempre buscando mais conhecimentos!
+              <Text fontSize="md" color={'white'}>
+              Front-end Developer | Developer Instructor at Rocketseat
+              <Text fontSize="md" fontWeight={'300'} color={'gray.500'}>
+              Um programador, focado em ajudar pessoas que estão iniciando na programação.
               </Text>
               </Text>
               <button className="buttonHome">

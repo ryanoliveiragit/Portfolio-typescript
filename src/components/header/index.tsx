@@ -74,8 +74,8 @@ export default function Header() {
   return (
     <>
       <Flex
-        bg={useColorModeValue("#08070b", "gray.800")}
-        color={useColorModeValue("gray.500", "gray.500")}
+        bg={useColorModeValue("#08070b", "gray.200")}
+        color={useColorModeValue("gray.200", "gray.200")}
         minH={"60px"}
         py={{ base: 0 }}
         px={{ base: 4 }}
