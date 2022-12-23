@@ -21,7 +21,7 @@ export default function Home() {
               <Text fontSize="lg" color={'white'}>
               Front-end Developer | @Viensoft.
               <Text fontSize="lg" color={'gray.500'}>
-                Um programador sempre buscando mais conhecimentos!
+                Programador sempre buscando mais conhecimentos!
               </Text>
               </Text>
               <button className="buttonHome">
