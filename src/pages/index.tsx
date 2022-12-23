@@ -19,7 +19,7 @@ export default function Home() {
                 {'Ryan Oliveira'}
               </Text>
               <Text fontSize="md" color={'white'}>
-              Front-end Developer | Developer Instructor at Rocketseat
+              Front-end Developer | Developer Instructor at viensoft
               <Text fontSize="md" fontWeight={'300'} color={'gray.500'}>
               Um programador, focado em ajudar pessoas que estão iniciando na programação.
               </Text>
