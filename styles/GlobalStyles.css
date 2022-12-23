@@ -1,0 +1,67 @@
+.rgb {
+  color: aqua;
+}
+main {
+  background-color: red;
+}
+body {
+  padding: 1% 5%;
+  background-color:#08070b !important;
+}
+.logo {
+  background-image: linear-gradient(135deg, #9580ff, #a84c85);
+  
+  /* Segundo passo: apagar do fundo tudo que não estiver imediatamente atrás de texto */
+  background-clip: text;
+  -webkit-background-clip: text; /* Alguns navegadores precisam do prefixo */
+
+  /* Terceiro passo: apagar o texto, deixando apenas o fundo atrás dele */
+  -webkit-text-fill-color: transparent;
+
+  /* Cor que contraste com o degradê, caso o navegador não suporte `background-clip: text` */
+  color: black;
+}
+.gradient {
+  /* Primeiro passo: definir um degradê como fundo */
+  background-image: linear-gradient(135deg, #9580ff, #6bff5e);
+  
+  /* Segundo passo: apagar do fundo tudo que não estiver imediatamente atrás de texto */
+  background-clip: text;
+  -webkit-background-clip: text; /* Alguns navegadores precisam do prefixo */
+
+  /* Terceiro passo: apagar o texto, deixando apenas o fundo atrás dele */
+  -webkit-text-fill-color: transparent;
+
+  /* Cor que contraste com o degradê, caso o navegador não suporte `background-clip: text` */
+  color: black;
+  
+}
+.css-1ynfsgs {
+  margin: 0!important;
+}
+.kbd {
+  color: #08070b;
+  background: #8f9ba8;
+  padding: 1px 5px;
+  border-radius: 4px;
+  transition: 0.2s ease-in-out;
+  font-family: var(--fonts-code);
+  font-size: 14px;
+}
+.kbd:hover {
+  background: #fff;
+}
+.buttonHome {
+  color: white;
+  padding: 2% 1%;
+  font-size: 15px;
+  width: 60%;
+  font-weight: 600;
+  text-align: start;
+  border-radius: 5px;
+  transition: .5s;
+}
+.buttonHome:hover {
+  background-color: rgb(56, 56, 56);
+}
+
