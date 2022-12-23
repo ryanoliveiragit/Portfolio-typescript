@@ -14,8 +14,8 @@ export default function Home() {
         <Header />
         <Flex h={"83vh"} w={"100%"} bg={"#08070b"}>
           <Center w={"100%"} fontSize={43} justify-content={"space-around"}>
-            <Stack spacing={2}>
-              <Text fontSize="5xl" fontWeight={700} className="gradient">
+            <Stack alignContent={'center'} flexWrap={'wrap'} alignItems={'stretch'} w={'100%'} p={5} spacing={3}>
+              <Text fontWeight={700} className="gradient">
                 Ryan Oliveira
               </Text>
               <Text fontSize="lg" color={'white'}>

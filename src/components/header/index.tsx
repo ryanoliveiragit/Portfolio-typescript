@@ -21,6 +21,7 @@ export interface NavItem {
   label: string;
   subLabel?: string;
   href?: string;
+  title?: string;
 }
 
 export interface NavItemProps {
@@ -86,7 +87,7 @@ export default function Header() {
         fontSize={25}
         fontWeight={700}
         className="logo">
-          Ryanvs
+          {'ryanvs'}
         </Text>
         <Flex
           flex={{ base: 1, md: "auto" }}
