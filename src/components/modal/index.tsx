@@ -1,5 +1,5 @@
 import { Text, Box } from "@chakra-ui/react";
-import React from "react";
+import React, { useState } from "react";
 import { MdOutlineContentCopy } from "react-icons/md";
 import { HiOutlineMail } from "react-icons/hi";
 import { AiOutlineHome } from "react-icons/ai";
@@ -12,9 +12,18 @@ import { AiFillLinkedin } from "react-icons/ai";
 import { RxDiscordLogo } from "react-icons/rx";
 import { AiOutlineSearch } from "react-icons/ai";
 
+
+const itemsCmdc = [
+  "maça",
+  "morango",
+];
+
 const BasicUsage = () => {
-  const [show, setShow] = React.useState(false);
-  const handleClick = () => setShow(!show);
+  const [busca, setBusca] = useState("");
+  const ItemsCmdcFilter = itemsCmdc.filter((itemCmdc) =>
+    itemCmdc.startsWith(busca)
+  );
+
   return (
     <>
       <Box
@@ -38,8 +47,19 @@ const BasicUsage = () => {
           borderTopRadius={"15px"}
           color={"#8f9ba865"}
         >
-          <AiOutlineSearch size={25} /> Digite um comando ou pesquise...
+          <AiOutlineSearch size={25} />{" "}
+          <input
+            type="text"
+            placeholder="pesquisar"
+            value={busca}
+            onChange={(ev) => setBusca(ev.target.value)}
+          />
         </Text>
+        <ul>
+          {ItemsCmdcFilter.map((itemCmdc) => (
+            <li key={itemCmdc}>{itemCmdc}</li>
+          ))}
+        </ul>
         <Box
           bgColor={"rgba(255, 255, 255, 0.05)"}
           backdropFilter={"saturate(300%) blur(40px)"}
