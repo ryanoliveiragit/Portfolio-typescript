@@ -7,7 +7,7 @@ body {
   background-color:#08070b !important;
 }
 .logo {
-  background-image: linear-gradient(135deg, #9580ff, #a84c85);
+  background-image: linear-gradient(135deg, #80ecff, #d502ff);
   
   /* Segundo passo: apagar do fundo tudo que não estiver imediatamente atrás de texto */
   background-clip: text;
@@ -19,9 +19,35 @@ body {
   /* Cor que contraste com o degradê, caso o navegador não suporte `background-clip: text` */
   color: black;
 }
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ff80bf;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #272727;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: #cf689b;
+}
+.highlight:hover {
+  cursor: pointer;
+  transition: 0.2s;
+  color: white;
+  background-color: rgba(53, 53, 53, 0.226);
+}
+option {
+padding: 2%!important;
+background-color: #181717e8!important;
+}
 .gradient {
   /* Primeiro passo: definir um degradê como fundo */
-  background-image: linear-gradient(135deg, #9580ff, #6bff5e);
+  background-image: linear-gradient(135deg, #80ecff, #d502ff);
   
   /* Segundo passo: apagar do fundo tudo que não estiver imediatamente atrás de texto */
   background-clip: text;
