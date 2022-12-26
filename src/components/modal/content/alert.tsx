@@ -23,7 +23,7 @@ function AlertModal() {
       bgColor={"transparent"}
       status="success"
     >
-      <AlertIcon w={15} />
+      <AlertIcon color={"pink.300"} w={15} />
       <Box>
         <AlertTitle
           fontSize={14}
@@ -32,30 +32,20 @@ function AlertModal() {
           fontWeight={"300"}
           bgColor={"transparent"}
         >
-          Copiado!
+          Copiado
         </AlertTitle>
       </Box>
       <CloseButton
         alignSelf="flex-start"
         position="relative"
-        right={3}
-        fontSize={9}
-        top={-2}
+        right={4}
+        fontSize={8}
+        top={-1}
         onClick={onClose}
       />
     </Alert>
   ) : (
-    <Button
-      fontSize={16}
-      p={"0%"}
-      w={"auto"}
-      fontWeight={"300"}
-      bgColor={"transparent"}
-      _hover={{ backgroundColor: "none" }}
-      onClick={onOpen}
-    >
-      Copiar URL
-    </Button>
+    <button onClick={onOpen}>Copiar URL</button>
   );
 }
 export default AlertModal;
