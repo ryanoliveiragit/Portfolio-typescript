@@ -1,5 +1,6 @@
 import { Text, Box } from "@chakra-ui/react";
 import React, { useState } from "react";
+import useCopyToClipboard from "./content/copy";
 import { MdOutlineContentCopy } from "react-icons/md";
 import { HiOutlineMail } from "react-icons/hi";
 import { AiOutlineHome } from "react-icons/ai";
@@ -10,20 +11,9 @@ import { FaInstagram } from "react-icons/fa";
 import { AiFillGithub } from "react-icons/ai";
 import { AiFillLinkedin } from "react-icons/ai";
 import { RxDiscordLogo } from "react-icons/rx";
-import { AiOutlineSearch } from "react-icons/ai";
-
-
-const itemsCmdc = [
-  "maça",
-  "morango",
-];
 
 const BasicUsage = () => {
-  const [busca, setBusca] = useState("");
-  const ItemsCmdcFilter = itemsCmdc.filter((itemCmdc) =>
-    itemCmdc.startsWith(busca)
-  );
-
+  const [value, copy] = useCopyToClipboard()
   return (
     <>
       <Box
@@ -38,50 +28,29 @@ const BasicUsage = () => {
         borderRadius={"15px"}
         fontFamily={"Lexend"}
       >
-        <Text
-          display={"flex"}
-          gap={3}
-          bgColor={"rgba(255, 255, 255, 0.05)"}
-          backdropFilter={"saturate(300%) blur(40px)"}
-          p={"4%"}
-          borderTopRadius={"15px"}
-          color={"#8f9ba865"}
-        >
-          <AiOutlineSearch size={25} />{" "}
-          <input
-            type="text"
-            placeholder="pesquisar"
-            value={busca}
-            onChange={(ev) => setBusca(ev.target.value)}
-          />
-        </Text>
-        <ul>
-          {ItemsCmdcFilter.map((itemCmdc) => (
-            <li key={itemCmdc}>{itemCmdc}</li>
-          ))}
-        </ul>
         <Box
           bgColor={"rgba(255, 255, 255, 0.05)"}
           backdropFilter={"saturate(300%) blur(40px)"}
           pl={3}
           fontWeight={"300"}
-          borderBottomRadius={"15px"}
+          borderRadius={"15px"}
           color={"#8f9ba8"}
           w={"100%"}
           h={"400px"}
           overflowY={"scroll"}
         >
-          <Text m={"2%"} fontWeight={"700"} color={"white"} fontSize={10}>
+          <Text pt={'2%'} m={"2%"} fontWeight={"700"} color={"white"} fontSize={10}>
             GERAL
           </Text>
+          <a target='_blank' href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSDbtnwFGgTJvbqZbCxwmBvSBXlSmbJjWXbHgdFtVhPSVqPqbZlgzdLWhfsJgHNpPgjLSCJK" rel="noreferrer">
           <Text className="highlight" p={2} gap={3} display={"flex"} m={"2%"}>
-            {" "}
             <HiOutlineMail size={20} />
             Enviar Email
           </Text>
+          </a>
           <Text className="highlight" p={2} gap={3} display={"flex"} m={"2%"}>
             <MdOutlineContentCopy size={20} />
-            Copiar URL
+            <button onClick={() => copy('https://ryanvs.dev/')}>Copiar URL</button>
           </Text>
           <Text
             gap={3}
@@ -92,10 +61,12 @@ const BasicUsage = () => {
           >
             IR PARA
           </Text>
+          <a href="http://localhost:3000/">
           <Text className="highlight" p={2} gap={3} display={"flex"} m={"2%"}>
             <AiOutlineHome size={20} />
             Home
           </Text>
+          </a>
           <Text className="highlight" p={2} gap={3} display={"flex"} m={"2%"}>
             <BiUser size={20} />
             Sobre
