@@ -58,7 +58,7 @@ useEffect(() => {
                 Um programador, focado em ajudar pessoas que estão iniciando na
                 programação.
               </Text>
-              <button onClick={setIsComponentVisible} className="buttonHome">
+              <button onClick={() => setIsComponentVisible(true)} className="buttonHome">
                 Pressione <kbd className="kbd">ctrl</kbd>{" "}
                 <kbd className="kbd">C</kbd> para iniciar →
               </button>

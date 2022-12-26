@@ -1,4 +1,4 @@
-import { Text, Box } from "@chakra-ui/react";
+import { Text, Box, useDisclosure } from "@chakra-ui/react";
 import React, { useState } from "react";
 import useCopyToClipboard from "./content/copy";
 import { MdOutlineContentCopy } from "react-icons/md";
@@ -11,9 +11,10 @@ import { FaInstagram } from "react-icons/fa";
 import { AiFillGithub } from "react-icons/ai";
 import { AiFillLinkedin } from "react-icons/ai";
 import { RxDiscordLogo } from "react-icons/rx";
+import AlertModal from "./content/alert";
 
 const BasicUsage = () => {
-  const [value, copy] = useCopyToClipboard()
+  const [value, copy] = useCopyToClipboard();
   return (
     <>
       <Box
@@ -39,18 +40,37 @@ const BasicUsage = () => {
           h={"400px"}
           overflowY={"scroll"}
         >
-          <Text pt={'2%'} m={"2%"} fontWeight={"700"} color={"white"} fontSize={10}>
+          <Text
+            pt={"2%"}
+            m={"2%"}
+            fontWeight={"700"}
+            color={"white"}
+            fontSize={10}
+          >
             GERAL
           </Text>
-          <a target='_blank' href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSDbtnwFGgTJvbqZbCxwmBvSBXlSmbJjWXbHgdFtVhPSVqPqbZlgzdLWhfsJgHNpPgjLSCJK" rel="noreferrer">
-          <Text className="highlight" p={2} gap={3} display={"flex"} m={"2%"}>
-            <HiOutlineMail size={20} />
-            Enviar Email
-          </Text>
+          <a
+            target="_blank"
+            href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSDbtnwFGgTJvbqZbCxwmBvSBXlSmbJjWXbHgdFtVhPSVqPqbZlgzdLWhfsJgHNpPgjLSCJK"
+            rel="noreferrer"
+          >
+            <Text className="highlight" p={2} gap={3} display={"flex"} m={"2%"}>
+              <HiOutlineMail size={20} />
+              Enviar Email
+            </Text>
           </a>
-          <Text className="highlight" p={2} gap={3} display={"flex"} m={"2%"}>
+          <Text
+            className="highlight"
+            alignItems={"center"}
+            p={2}
+            gap={3}
+            display={"flex"}
+            m={"2%"}
+          >
             <MdOutlineContentCopy size={20} />
-            <button onClick={() => copy('https://ryanvs.dev/')}>Copiar URL</button>
+            <button onClick={() => copy("https://ryanvs.dev/")}>
+              <AlertModal />
+            </button>
           </Text>
           <Text
             gap={3}
@@ -62,10 +82,10 @@ const BasicUsage = () => {
             IR PARA
           </Text>
           <a href="http://localhost:3000/">
-          <Text className="highlight" p={2} gap={3} display={"flex"} m={"2%"}>
-            <AiOutlineHome size={20} />
-            Home
-          </Text>
+            <Text className="highlight" p={2} gap={3} display={"flex"} m={"2%"}>
+              <AiOutlineHome size={20} />
+              Home
+            </Text>
           </a>
           <Text className="highlight" p={2} gap={3} display={"flex"} m={"2%"}>
             <BiUser size={20} />
