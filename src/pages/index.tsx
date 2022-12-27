@@ -43,8 +43,8 @@ useEffect(() => {
 
   return (
     <>
+    <Header />
       <Container>
-        <Header />
         <Flex
           fontFamily={"Lexend"}
           height={"75vh"}
@@ -88,8 +88,8 @@ useEffect(() => {
             </Stack>
           </Center>
         </Flex>
-        <SmallWithNavigation />
       </Container>
+      <SmallWithNavigation />
     </>
   );
 }

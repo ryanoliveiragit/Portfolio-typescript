@@ -12,6 +12,7 @@ import { AiFillGithub } from "react-icons/ai";
 import { AiFillLinkedin } from "react-icons/ai";
 import { RxDiscordLogo } from "react-icons/rx";
 import AlertModal from "./content/alert";
+import Link from 'next/link'
 
 type MyAttributes = {
   closemodal: () => void;
@@ -110,12 +111,12 @@ const BasicUsage: React.FC<MyAttributes> = ({closemodal}) => {
                 m={"2%"}
               >
                 <AiOutlineHome size={20} />
-                Home
+                <Link href="/home">Home</Link>
               </Text>
             </a>
             <Text className="highlight" p={2} gap={3} display={"flex"} m={"2%"}>
               <BiUser size={20} />
-              Sobre
+              <Link href="/sobre">Sobre</Link>
             </Text>
             <Text className="highlight" p={2} gap={3} display={"flex"} m={"2%"}>
               <RxCode size={20} />

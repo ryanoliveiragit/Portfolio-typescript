@@ -11,15 +11,9 @@ span {
 }
 .logo {
   background-image: linear-gradient(135deg, #80ecff, #d502ff);
-  
-  /* Segundo passo: apagar do fundo tudo que não estiver imediatamente atrás de texto */
   background-clip: text;
-  -webkit-background-clip: text; /* Alguns navegadores precisam do prefixo */
-
-  /* Terceiro passo: apagar o texto, deixando apenas o fundo atrás dele */
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
-  /* Cor que contraste com o degradê, caso o navegador não suporte `background-clip: text` */
   color: black;
 }
 ::-webkit-scrollbar {
@@ -63,6 +57,22 @@ background-color: #181717e8!important;
   color: black;
   
 }
+
+
+.gradientMobile {
+  /* Primeiro passo: definir um degradê como fundo */
+  background-image: linear-gradient(135deg, #ff8080, #ff05ea);
+  /* Segundo passo: apagar do fundo tudo que não estiver imediatamente atrás de texto */
+  background-clip: text;
+  -webkit-background-clip: text; /* Alguns navegadores precisam do prefixo */
+
+  /* Terceiro passo: apagar o texto, deixando apenas o fundo atrás dele */
+  -webkit-text-fill-color: transparent;
+
+  /* Cor que contraste com o degradê, caso o navegador não suporte `background-clip: text` */
+  color: black;
+  
+}
 .css-1ynfsgs {
   margin: 0!important;
 }
@@ -91,4 +101,64 @@ background-color: #181717e8!important;
 .buttonHome:hover {
   background-color: rgb(56, 56, 56);
 }
+.container {
+  padding: 1% 30%;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  display: flex;
+}
 
+.photo {
+  display: flex;
+}
+.none {
+  display: block;
+}
+img {
+  width: 45%;
+  border-radius: 15px;
+  padding-bottom: 0%;
+}
+
+@media only screen and (max-width: 1300px) {
+  .photo {
+    display: block;
+    padding-bottom: 5%;
+  }
+  img {
+    width: 100%;
+  }
+  .container {
+    width: 100%;
+  }
+  .none {
+    display: none;
+  }
+  .gradientMobile {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .photo {
+    display: block;
+    padding-bottom: 5%;
+  }
+  img {
+    width: 100%;
+  }
+  .container {
+    padding: 0%;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+  }
+  .none {
+    display: none;
+  }
+  .gradientMobile {
+    display: none;
+  }
+}
