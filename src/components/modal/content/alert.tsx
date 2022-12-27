@@ -23,7 +23,6 @@ function AlertModal() {
       bgColor={"transparent"}
       status="success"
     >
-      <AlertIcon color={"pink.300"} w={15} />
       <Box>
         <AlertTitle
           fontSize={14}
@@ -35,11 +34,13 @@ function AlertModal() {
           Copiado
         </AlertTitle>
       </Box>
+      <AlertIcon color={"pink.300"} w={15} />
       <CloseButton
         alignSelf="flex-start"
         position="relative"
-        right={4}
-        fontSize={8}
+        right={5}
+        fontSize={5}
+        color={'pink.300'}
         top={-1}
         onClick={onClose}
       />

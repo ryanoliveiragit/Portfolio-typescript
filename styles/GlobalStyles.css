@@ -6,6 +6,9 @@ body {
   padding: 2% 5%;
   background-color:#08070b !important;
 }
+span {
+  color: white!important;
+}
 .logo {
   background-image: linear-gradient(135deg, #80ecff, #d502ff);
   

@@ -8,6 +8,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import { NAV_ITEMS } from ".";
+import NextLink from 'next/link'
 import DesktopSubNav from "./DesktopSubNav";
 
 const DesktopNav = () => {
@@ -23,6 +24,7 @@ const DesktopNav = () => {
           <Popover trigger={"hover"} placement={"bottom-start"}>
             <PopoverTrigger>
               <Link
+                as={NextLink}
                 p={4}
                 href={navItem.href ?? "#"}
                 fontSize={"12px"}

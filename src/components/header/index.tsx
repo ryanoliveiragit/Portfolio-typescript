@@ -1,33 +1,33 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import {
   Flex,
   Text,
   IconButton,
-  Button,
   Stack,
   Collapse,
   useColorModeValue,
-  useBreakpointValue,
   useDisclosure,
-  color,
 } from "@chakra-ui/react";
 import { MdOutlineGridView } from "react-icons/md";
 import { VscSymbolNamespace } from "react-icons/vsc";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import DesktopNav from "./DesktopNav";
 import MobileNav from "./MobileNav";
+import { Link } from '@chakra-ui/react'
+import NextLink from 'next/link'
 
 export interface NavItem {
   label: string;
   subLabel?: string;
   href?: string;
-  title?: string;
+  nav?: string;
 }
 
 export interface NavItemProps {
   label?: string;
   href?: string;
   children?: NavItem[];
+  nav?: string;
 }
 
 const iconStyle: React.CSSProperties = {
@@ -47,24 +47,24 @@ const iconSelect: React.CSSProperties = {
 
 export const NAV_ITEMS: NavItemProps[] = [
   {
-    label: "SHOP",
-    href: "#",
-  },
-  {
     label: "SOBRE",
-    href: "#",
+    href: "sobre",
   },
   {
     label: "PROJETOS",
-    href: "#",
+    href: "projetos",
+  },
+  {
+    label: "SKILLS",
+    href: "skills",
   },
   {
     label: "SETUP",
-    href: "#",
+    href: "setup",
   },
   {
     label: "SHOP",
-    href: "#",
+    href: "shop",
   },
 ];
 
@@ -83,12 +83,14 @@ export default function Header() {
         paddingTop={2}
         align={"center"}
       >
-        <Text 
+        <Link
+        as={NextLink}
         fontSize={25}
         fontWeight={700}
+        href={'/'}
         className="logo">
           {'ryanvs'}
-        </Text>
+        </Link>
         <Flex
           flex={{ base: 1, md: "auto" }}
           ml={{ base: 1 }}
