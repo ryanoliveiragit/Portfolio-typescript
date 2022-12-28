@@ -61,12 +61,13 @@ useEffect(() => {
               spacing={3}
               mb={90}
             >
-              <Box mb={20}>
+              <Box mb={10}>
               <Box w={'10%'}>
               {isComponentVisible && <BasicUsage closemodal={() =>setIsComponentVisible(false)}/>}
               </Box>
               </Box>
               <Text
+              fontSize={38}
                 fontWeight={"500"}
                 className="gradient"
                 letterSpacing={-1}

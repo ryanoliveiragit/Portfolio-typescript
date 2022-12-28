@@ -28,7 +28,7 @@ const BasicUsage: React.FC<MyAttributes> = ({closemodal}) => {
           top={"0%"}
           left={"0%"}
           bottom={"0%"}
-          w={"100%"}
+          w={"97vw"}
           bgColor={'#00000040'}
       >
       </Box>
@@ -109,7 +109,7 @@ const BasicUsage: React.FC<MyAttributes> = ({closemodal}) => {
                 m={"2%"}
               >
                 <AiOutlineHome size={20} />
-                <Link href="/home">Home</Link>
+                <Link href="/">Home</Link>
               </Text>
             </a>
             <Text className="highlight" p={2} gap={3} display={"flex"} m={"2%"}>
@@ -118,15 +118,11 @@ const BasicUsage: React.FC<MyAttributes> = ({closemodal}) => {
             </Text>
             <Text className="highlight" p={2} gap={3} display={"flex"} m={"2%"}>
               <RxCode size={20} />
-              Projetos
+              <Link href="/projetos">Projetos</Link>
             </Text>
             <Text className="highlight" p={2} gap={3} display={"flex"} m={"2%"}>
               <MdOutlineComputer size={20} />
               Setup
-            </Text>
-            <Text className="highlight" p={2} gap={3} display={"flex"} m={"2%"}>
-              <MdOutlineComputer size={20} />
-              Shop
             </Text>
             <Text
               gap={3}

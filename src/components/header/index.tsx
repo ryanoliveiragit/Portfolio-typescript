@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React, { useState } from "react";
 import {
   Flex,
   Text,
@@ -15,6 +15,7 @@ import DesktopNav from "./DesktopNav";
 import MobileNav from "./MobileNav";
 import { Link } from '@chakra-ui/react'
 import NextLink from 'next/link'
+import BasicUsage from "../modal";
 
 export interface NavItem {
   label: string;
@@ -30,20 +31,6 @@ export interface NavItemProps {
   nav?: string;
 }
 
-const iconStyle: React.CSSProperties = {
-  backgroundColor: "#f3f3f3",
-  fontSize: "2.5rem",
-  padding: "0.5rem",
-  borderRadius: "100%",
-};
-
-const iconSelect: React.CSSProperties = {
-  backgroundColor: "#34D399",
-  color: "white",
-  fontSize: "2.7rem",
-  padding: "0.5rem",
-  borderRadius: "100%",
-};
 
 export const NAV_ITEMS: NavItemProps[] = [
   {
@@ -55,22 +42,24 @@ export const NAV_ITEMS: NavItemProps[] = [
     href: "projetos",
   },
   {
-    label: "SKILLS",
-    href: "skills",
-  },
-  {
     label: "SETUP",
     href: "setup",
   },
   {
-    label: "SHOP",
-    href: "shop",
+    label: "CONTATO",
+    href: "contato",
   },
 ];
 
 export default function Header() {
   const { isOpen, onToggle } = useDisclosure();
-
+  const [isComponentVisible, setIsComponentVisible] = useState(false);
+  const handleKeyDown = (event: KeyboardEvent) => {
+    if (event.ctrlKey && event.key === "c") {
+      setIsComponentVisible(true);
+    }
+    
+  };
   return (
     <>
       <Flex
@@ -123,7 +112,9 @@ export default function Header() {
             href={"#"}
             cursor={"pointer"}
             color={"white"}
-          ></MdOutlineGridView>
+            onClick={() => setIsComponentVisible(true)}
+          />
+          {isComponentVisible && <BasicUsage closemodal={() =>setIsComponentVisible(false)}/>}
         </Stack>
       </Flex>
 
