@@ -47,10 +47,9 @@ useEffect(() => {
       <Container>
         <Flex
           fontFamily={"Lexend"}
-          height={"75vh"}
+          height={"74vh"}
           justify-content={"center"}
           w={"100%"}
-          bg={"#08070b"}
         >
           <Center w={"100%"} fontSize={43} justify-content={"space-around"}>
             
@@ -68,14 +67,14 @@ useEffect(() => {
               </Box>
               </Box>
               <Text
-                fontFamily={"Lexend"}
                 fontWeight={"500"}
                 className="gradient"
+                letterSpacing={-1}
               >
-                {"Ryan Oliveira"}
+                {'Ryan Oliveira'}
               </Text>
               <Text fontSize="md" color={"white"}>
-                Front-end Developer | Developer Instructor at viensoft
+                Front-end Developer | freelancer at <i><u>Viensoft</u></i>
               </Text>
               <Text fontSize="md" fontWeight={"300"} color={"gray.500"}>
                 Um programador, focado em ajudar pessoas que estão iniciando na

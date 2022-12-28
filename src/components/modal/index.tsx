@@ -29,17 +29,15 @@ const BasicUsage: React.FC<MyAttributes> = ({closemodal}) => {
           left={"0%"}
           bottom={"0%"}
           w={"100%"}
-          bgColor={'#000000b7'}
+          bgColor={'#00000040'}
       >
       </Box>
       <Box
+          left={'29%'}
+          top={'15%'}
+          padding={'0%'}
           fontSize={16}
-          top={"30%"}
-          left={"50%"}
-          right={"50%"}
-          bottom={"50%"}
-          w={"40%"}
-          transform={"translate(-50%, -50%);"}
+          w={"45%"}
           position={"absolute"}
           borderRadius={"15px"}
           fontFamily={"Lexend"}
@@ -50,7 +48,7 @@ const BasicUsage: React.FC<MyAttributes> = ({closemodal}) => {
             pl={3}
             fontWeight={"300"}
             borderRadius={"15px"}
-            color={"#8f9ba8"}
+            color={"gray.500"}
             w={"95%"}
             h={"500px"}
             overflowY={"scroll"}
@@ -58,9 +56,9 @@ const BasicUsage: React.FC<MyAttributes> = ({closemodal}) => {
             <Text
               pt={"2%"}
               m={"2%"}
-              fontWeight={"700"}
+              fontWeight={"500"}
               color={"white"}
-              fontSize={10}
+              fontSize={'0.6rem'}
             >
               GERAL
             </Text>
