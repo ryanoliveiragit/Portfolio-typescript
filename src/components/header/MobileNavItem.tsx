@@ -27,8 +27,8 @@ const MobileNavItem = ({ label, children, href }: NavItemProps) => {
         }}
       >
         <Text
-          fontWeight={600}
-          color={useColorModeValue("gray.600", "gray.200")}
+          fontWeight={400}
+          color={useColorModeValue("gray.400", "gray.200")}
         >
           {label}
         </Text>

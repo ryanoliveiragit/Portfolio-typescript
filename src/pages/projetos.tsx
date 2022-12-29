@@ -39,7 +39,7 @@ export default function Sobre() {
         <Text mb={'0%'} mt={'13%'} fontSize={14} fontWeight={"600"} color={"gray.100"}>
             Projetos Populares
           </Text>
-        <SimpleGrid pb={'25%'} gap={5} columns={2} spacing={2}>
+        <SimpleGrid className="gridmobile" pb={'25%'} gap={5} columns={2} spacing={2}>
           <Text color={"gray.500"} fontSize={14}>
             {Astethic.map((repository) => {
               return (

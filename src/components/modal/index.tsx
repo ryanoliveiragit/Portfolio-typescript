@@ -35,9 +35,10 @@ const BasicUsage: React.FC<MyAttributes> = ({closemodal}) => {
       >
       </Box>
       <Box
+      left={'1px'}
           width={'100%'}
           fontSize={14}
-          maxWidth={"900px"}
+          maxWidth={"600px"}
           position={"absolute"}
           borderRadius={"35px"}
           fontFamily={"Lexend"}
@@ -49,8 +50,8 @@ const BasicUsage: React.FC<MyAttributes> = ({closemodal}) => {
             fontWeight={"300"}
             borderRadius={"5px"}
             color={"gray.400"}
-            w={"90%"}
-            h={"400px"}
+            w={"100%"}
+            h={"450px"}
             overflowY={"scroll"}
           >
             <Text

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import {
   Flex,
-  Text,
+  Box,
   IconButton,
   Stack,
   Collapse,
@@ -13,7 +13,7 @@ import { VscSymbolNamespace } from "react-icons/vsc";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import DesktopNav from "./DesktopNav";
 import MobileNav from "./MobileNav";
-import { Link } from '@chakra-ui/react'
+import { Link, Center } from '@chakra-ui/react'
 import NextLink from 'next/link'
 import BasicUsage from "../modal";
 
@@ -114,13 +114,17 @@ export default function Header() {
             color={"white"}
             onClick={() => setIsComponentVisible(true)}
           />
-          {isComponentVisible && <BasicUsage closemodal={() =>setIsComponentVisible(false)}/>}
         </Stack>
       </Flex>
-
       <Collapse in={isOpen} animateOpacity>
         <MobileNav />
       </Collapse>
+      <Center w={'100%'}>
+      <Box className="margin"> 
+      {isComponentVisible && <BasicUsage closemodal={() =>setIsComponentVisible(false)}/>}
+      </Box>
+      </Center>
+
     </>
   );
 }

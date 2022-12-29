@@ -31,14 +31,8 @@ const DesktopNav = () => {
                 letterSpacing={'1.2px'}
                 fontWeight={500}
                 color={linkColor}
-                _hover={{
-                  transition: '.5s',
-                  textDecoration: "none",
-                  color: 'white',
-                  padding: '15px',
-                  borderRadius: '5px',
-                  backgroundColor: 'rgba(255, 255, 255, 0.144)',
-                }}
+                textDecoration={'none'}
+                className={'animate'}
               >
                 {navItem.label}
               </Link>

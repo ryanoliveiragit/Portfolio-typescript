@@ -17,6 +17,7 @@ span {
   -webkit-text-fill-color: transparent;
   color: rgb(255, 255, 255);
 }
+
 ::-webkit-scrollbar {
   width: 5px;
 }
@@ -122,7 +123,38 @@ background-color: #181717e8!important;
   flex-direction: column;
   display: flex;
 }
+.animate {
+  position: relative;
+  color: rgb(255, 255, 255);
+  text-decoration: none!important;
+}
 
+.animate:hover {
+  color: rgb(255, 255, 255);
+}
+
+.animate::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 1px;
+  bottom: 10px;
+  left: 0;
+  background-image: linear-gradient(135deg, #ff8080, #ff05ea);
+  transform: scaleX(0);
+  transform-origin: top left;
+  transition: transform 0.3s ease;
+}
+.margin{
+  width: 50%;
+  margin-left: 15%;
+  position: relative;
+  background-color: red;
+}
+.animate:hover::before {
+  transform: scaleX(1);
+}
 .photo {
   display: flex;
 }
@@ -143,6 +175,13 @@ img {
   img {
     width: 100%;
   }
+  .margin{
+    margin-top: 5%;
+    width: 100%;
+    margin-left: 0%;
+    position: relative;
+    background-color: red;
+  }
   .container {
     width: 100%;
   }
@@ -159,9 +198,13 @@ img {
     display: block;
     padding-bottom: 5%;
   }
+  .gridmobile {
+    grid-template-columns: none!important;
+  }
   img {
     width: 100%;
   }
+
   .container {
     padding: 0%;
     align-items: flex-start;

@@ -59,7 +59,7 @@ export default function Home() {
           justify-content={"center"}
           w={"100%"}
         >
-          <Box  mt={'70px'}>
+          <Box  mt={'35px'}>
           <Fade transition={{ enter: { duration: .3 }, exit: { duration: .3 } }} in={isOpen}>
                   {isComponentVisible && (
                     <BasicUsage

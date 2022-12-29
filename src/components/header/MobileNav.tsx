@@ -5,7 +5,7 @@ import MobileNavItem from "./MobileNavItem";
 const MobileNav = () => {
   return (
     <Stack
-      bg={useColorModeValue("black", "gray.800")}
+      bg={useColorModeValue("transparent", "gray.400")}
       p={4}
       display={{ md: "none" }}
     >
