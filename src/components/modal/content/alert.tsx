@@ -5,7 +5,7 @@ import {
   Box,
   CloseButton,
   useDisclosure,
-  Button,
+  Text,
 } from "@chakra-ui/react";
 
 function AlertModal() {
@@ -31,10 +31,9 @@ function AlertModal() {
           fontWeight={"300"}
           bgColor={"transparent"}
         >
-          Copiado
+          <Text fontSize={14}>Copiado</Text>
         </AlertTitle>
       </Box>
-      <AlertIcon color={"pink.300"} w={15} />
       <CloseButton
         alignSelf="flex-start"
         position="relative"
@@ -46,7 +45,7 @@ function AlertModal() {
       />
     </Alert>
   ) : (
-    <button onClick={onOpen}>Copiar URL</button>
+    <button onClick={onOpen}><Text fontSize={14}>Copiar URL</Text></button>
   );
 }
 export default AlertModal;

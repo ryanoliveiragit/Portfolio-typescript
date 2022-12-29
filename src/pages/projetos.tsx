@@ -23,8 +23,8 @@ export default function Sobre() {
       <Container>
         <Center display={'column'}>
         <Text
-          mt={'15%'}
-          className={"gradientMobile"}
+          mt={'5vh'}
+          className={"gradient"}
           fontWeight={"700"}
           fontSize={24}
           color={"gray.500"}
@@ -36,7 +36,7 @@ export default function Sobre() {
             desenvolvendo durante a minha jornada como programador.
           </Text>
           </Center>
-        <Text mb={'5%'} mt={'5%'} fontSize={14} fontWeight={"600"} color={"gray.100"}>
+        <Text mb={'0%'} mt={'13%'} fontSize={14} fontWeight={"600"} color={"gray.100"}>
             Projetos Populares
           </Text>
         <SimpleGrid pb={'25%'} gap={5} columns={2} spacing={2}>

@@ -3,7 +3,7 @@
   color: aqua;
 }
 body {
-  padding: 2% 5%;
+  padding: 1% 5%;
   background-color:#08060cf1 !important;
   
 }
@@ -37,7 +37,7 @@ span {
   cursor: pointer;
   transition: 0.2s;
   color: white;
-  background-color: rgba(53, 53, 53, 0.226);
+
 }
 option {
 padding: 2%!important;
@@ -73,7 +73,6 @@ background-color: #181717e8!important;
   color: black;
   
 }
-
 .gradientMobile {
   /* Primeiro passo: definir um degradê como fundo */
   background-image: linear-gradient(135deg, #ff8080, #ff05ea);
@@ -169,11 +168,5 @@ img {
     justify-content: center;
     flex-direction: column;
     display: flex;
-  }
-  .none {
-    display: none;
-  }
-  .gradientMobile {
-    display: none;
   }
 }

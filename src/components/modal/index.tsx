@@ -24,41 +24,41 @@ const BasicUsage: React.FC<MyAttributes> = ({closemodal}) => {
     <>
       <Box
           onClick={closemodal}
-          position={"absolute"}
-          top={"0%"}
-          left={"0%"}
-          bottom={"0%"}
-          w={"97vw"}
-          bgColor={'#00000040'}
+          position={"fixed"}
+          display={'flex'}
+          alignItems={'flex-start'}
+          justifyContent={'center'}
+          width={'100%'}
+          inset={'0px'}
+          padding={'14vh 16px 16px'}
+          bgColor={'rgba(0, 0, 0, 0.8)'}
       >
       </Box>
       <Box
-          left={'29%'}
-          top={'15%'}
-          padding={'0%'}
-          fontSize={16}
-          w={"45%"}
+          width={'100%'}
+          fontSize={14}
+          maxWidth={"900px"}
           position={"absolute"}
-          borderRadius={"15px"}
+          borderRadius={"35px"}
           fontFamily={"Lexend"}
         >
           <Box
-            bgColor={"rgba(255, 255, 255, 0.05)"}
-            backdropFilter={"saturate(300%) blur(40px)"}
+            background={'rgba(255, 255, 255, 0.062);'}
+            backdropFilter={"saturate(300%) blur(25px);"}
             pl={3}
             fontWeight={"300"}
-            borderRadius={"15px"}
-            color={"gray.500"}
-            w={"95%"}
-            h={"500px"}
+            borderRadius={"5px"}
+            color={"gray.400"}
+            w={"90%"}
+            h={"400px"}
             overflowY={"scroll"}
           >
             <Text
               pt={"2%"}
-              m={"2%"}
-              fontWeight={"500"}
+              m={"1%"}
+              fontWeight={"400"}
               color={"white"}
-              fontSize={'0.6rem'}
+              fontSize={8}
             >
               GERAL
             </Text>
@@ -69,10 +69,10 @@ const BasicUsage: React.FC<MyAttributes> = ({closemodal}) => {
             >
               <Text
                 className="highlight"
-                p={2}
+                p={1}
                 gap={3}
                 display={"flex"}
-                m={"2%"}
+                m={"4% 1%"}
               >
                 <HiOutlineMail size={20} />
                 Enviar Email
@@ -81,10 +81,10 @@ const BasicUsage: React.FC<MyAttributes> = ({closemodal}) => {
             <Text
               className="highlight"
               alignItems={"center"}
-              p={2}
+              p={1}
               gap={3}
               display={"flex"}
-              m={"2%"}
+              m={"4% 1%"}
             >
               <MdOutlineContentCopy size={20} />
               <Box onClick={() => copy("https://ryanvs.dev/")}>
@@ -93,17 +93,17 @@ const BasicUsage: React.FC<MyAttributes> = ({closemodal}) => {
             </Text>
             <Text
               gap={3}
-              m={"2%"}
-              fontWeight={"700"}
+              m={"1%"}
+              fontWeight={"400"}
               color={"white"}
-              fontSize={10}
+              fontSize={8}
             >
               IR PARA
             </Text>
             <a href="http://localhost:3000/">
               <Text
                 className="highlight"
-                p={2}
+                p={1}
                 gap={3}
                 display={"flex"}
                 m={"2%"}
@@ -112,41 +112,41 @@ const BasicUsage: React.FC<MyAttributes> = ({closemodal}) => {
                 <Link href="/">Home</Link>
               </Text>
             </a>
-            <Text className="highlight" p={2} gap={3} display={"flex"} m={"2%"}>
+            <Text className="highlight" p={1} gap={3} display={"flex"} m={"4% 1%"}>
               <BiUser size={20} />
               <Link href="/sobre">Sobre</Link>
             </Text>
-            <Text className="highlight" p={2} gap={3} display={"flex"} m={"2%"}>
+            <Text className="highlight" p={1} gap={3} display={"flex"} m={"4% 1%"}>
               <RxCode size={20} />
               <Link href="/projetos">Projetos</Link>
             </Text>
-            <Text className="highlight" p={2} gap={3} display={"flex"} m={"2%"}>
+            <Text className="highlight" p={1} gap={3} display={"flex"} m={"4% 1%"}>
               <MdOutlineComputer size={20} />
               Setup
             </Text>
             <Text
               gap={3}
               display={"flex"}
-              m={"2%"}
-              fontWeight={"700"}
+              m={"1%"}
+              fontWeight={"400"}
               color={"white"}
-              fontSize={10}
+              fontSize={8}
             >
               SEGUIR
             </Text>
-            <Text className="highlight" p={2} gap={3} display={"flex"} m={"2%"}>
+            <Text className="highlight" p={1} gap={3} display={"flex"} m={"4% 1%"}>
               <FaInstagram size={20} />
               Instagram
             </Text>
-            <Text className="highlight" p={2} gap={3} display={"flex"} m={"2%"}>
+            <Text className="highlight" p={1} gap={3} display={"flex"} m={"4% 1%"}>
               <AiFillGithub size={20} />
               Github
             </Text>
-            <Text className="highlight" p={2} gap={3} display={"flex"} m={"2%"}>
+            <Text className="highlight" p={1} gap={3} display={"flex"} m={"4% 1%"}>
               <AiFillLinkedin size={20} />
               Linkedin
             </Text>
-            <Text className="highlight" p={2} gap={3} display={"flex"} m={"2%"}>
+            <Text className="highlight" p={1} gap={3} display={"flex"} m={"4% 1%"}>
               <RxDiscordLogo size={20} />
               Discord
             </Text>
