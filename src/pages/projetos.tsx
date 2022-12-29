@@ -36,7 +36,7 @@ export default function Sobre() {
             desenvolvendo durante a minha jornada como programador.
           </Text>
           </Center>
-        <Text mb={'0%'} mt={'13%'} fontSize={14} fontWeight={"600"} color={"gray.100"}>
+        <Text mb={'5%'} mt={'12%'} fontSize={14} fontWeight={"600"} color={"gray.100"}>
             Projetos Populares
           </Text>
         <SimpleGrid className="gridmobile" pb={'25%'} gap={5} columns={2} spacing={2}>
