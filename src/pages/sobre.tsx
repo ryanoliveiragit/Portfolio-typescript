@@ -25,8 +25,9 @@ export default function Sobre() {
         <div className="photo">
           <Stack gap={4}>
             <Text lineHeight={5} fontSize={14} pt={"2%"} color={"gray.500"}>
-              Atualmente tenho adquirido <span>experiências</span> desenvolvendo
-              projetos pessoais e tenho <br /> <span>conhecimentos</span> em:
+              Meu nome é Ryan Oliveira e tenho <span>20</span> anos. <br />
+              Atualmente tenho adquirido <span>experiências</span> com estudos e desenvolvendo
+              projetos pessoais, tenho <br /> <span>conhecimentos</span> em:
               HTML, CSS, JavaScript, TypeScript, Python, ChakraUi,
               StyledComponent, NextJS, ReactJS.
             </Text>
@@ -38,24 +39,47 @@ export default function Sobre() {
               Bio
             </Text>
             <Text color={"gray.500"} fontSize={14}>
-              Me chamo João, mas pode me chamar de Biro.
+              sou apaixonado por programação e gosto de me aprofundar em
+              assuntos variados para entender o motivo das coisas funcionarem.
+              Sempre curioso e interessado em aprender mais, busco aprimorar
+              minhas habilidades e conhecimentos constantemente. Atualmente,
+              estou em busca da minha primeira oportunidade como desenvolvedor
+              front-end e estou ansioso para começar a minha carreira nesta área
+              tão desafiadora e gratificante. Acredito que meu espírito curioso
+              e dedicação ao aprendizado constante me ajudarão a enfrentar
+              qualquer desafio que possa surgir no caminho.
             </Text>
             <Text fontSize={24} fontWeight={"600"} color={"gray.100"}>
               Carreira
             </Text>
             <Text fontWeight={"600"} color={"gray.100"} fontSize={14}>
-              Developer
+              Freelancer front-end
             </Text>
             <Text color={"gray.500"} fontSize={14} fontWeight={"400"}>
-              Rocketseat • Rio do Sul, SC <br />
-              set 2019 – Momento • 3 anos 3 meses
+              <a
+                href="https://www.viensoft.com.br/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <u>Viensoft</u>
+              </a>{" "}
+              • Remoto, SC jan 2022
+              <br />
+              jan 2022 – Momento
             </Text>
             <Text fontWeight={"600"} fontSize={14} color={"gray.100"}>
               N1 Support
             </Text>
             <Text color={"gray.500"} fontSize={14} fontWeight={"400"}>
-              Helpfor • Bebedouro, SP nov 2017 <br />
-              set 2019 • 1 ano 10 meses
+              <a
+                href="https://www.mutant.com.br/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <u>Mutant</u>
+              </a>{" "}
+              • Barra-funda, SP nov 2017 <br />
+              sep 2022 – Momento
             </Text>
           </Stack>
         </div>

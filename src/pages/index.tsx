@@ -85,14 +85,10 @@ export default function Home() {
                 {"Ryan Oliveira"}
               </Text>
               <Text fontSize="md" color={"white"}>
-                Front-end Developer | freelancer at{" "}
-                <i>
-                  <u>Viensoft</u>
-                </i>
+                Front-end Developer | accessibility and end-user experience.
               </Text>
               <Text fontSize="md" fontWeight={"300"} color={"gray.500"}>
-                Um programador, focado em ajudar pessoas que estão iniciando na
-                programação.
+                 <Text as={'i'}>For me, everything is a challenge that can be discovered.</Text>
               </Text>
               <button
                 onClick={() => handleClick()}

@@ -3,14 +3,18 @@ import { Text, Stack, Flex, Link, Box, SimpleGrid, Center, Container } from "@ch
 import Header from "../components/header";
 import SmallWithNavigation from "../components/footer";
 import React, { useState, useEffect } from "react";
-import { BiCodeCurly } from 'react-icons/bi'
+import { Spinner } from '@chakra-ui/react'
 
 export default function Sobre() {
   const [repositoreis, setRepositories] = useState<any[]>([]);
+  const [removeLoading, setRemoveLoading] = useState(true)
   useEffect(() => {
-    fetch("https://api.github.com/users/ryanoliveiragit/repos")
+    setTimeout(() => {
+      fetch("https://api.github.com/users/ryanoliveiragit/repos")
       .then((response: { json: () => any }) => response.json())
       .then(data => setRepositories(data));
+      setRemoveLoading(false);
+    }, 1000);
   }, []);
   const Astethic = repositoreis.filter(repositorys => (repositorys.id == '520384346'));
   const Calculadora = repositoreis.filter(repositorys => (repositorys.id == '496807598'));
@@ -37,9 +41,10 @@ export default function Sobre() {
           </Text>
           </Center>
         <Text mb={'5%'} mt={'12%'} fontSize={14} fontWeight={"600"} color={"gray.100"}>
-            Projetos Populares
+            Projetos Populares:
           </Text>
         <SimpleGrid className="gridmobile" pb={'25%'} gap={5} columns={2} spacing={2}>
+        {removeLoading && <Spinner color={"white"} />}
           <Text color={"gray.500"} fontSize={14}>
             {Astethic.map((repository) => {
               return (
