@@ -120,7 +120,7 @@ export default function Header() {
         <MobileNav />
       </Collapse>
       <Center w={'100%'}>
-      <Box className="margin"> 
+      <Box zIndex={'10'} className="margin"> 
       {isComponentVisible && <BasicUsage closemodal={() =>setIsComponentVisible(false)}/>}
       </Box>
       </Center>
