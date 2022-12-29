@@ -23,8 +23,8 @@ span {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #ff80bf;
-  border-radius: 10px;
+  background-color: #644fd8;
+  border-radius: 25px;
 }
 
 ::-webkit-scrollbar-track {
@@ -35,8 +35,10 @@ span {
   background-color: #cf689b;
 }
 .highlight:hover {
+  background-color: #644fd8;
   cursor: pointer;
-  transition: 0.2s;
+  border-radius: 10px;
+  transition: 0.4s;
   color: white;
 
 }

@@ -38,6 +38,7 @@ function AlertModal() {
         alignSelf="flex-start"
         position="relative"
         right={5}
+        display={'none'}
         fontSize={5}
         color={'pink.300'}
         top={-1}
@@ -45,7 +46,7 @@ function AlertModal() {
       />
     </Alert>
   ) : (
-    <button onClick={onOpen}><Text fontSize={14}>Copiar URL</Text></button>
+    <Text onClick={onOpen} fontSize={14}>Copiar URL</Text>
   );
 }
 export default AlertModal;

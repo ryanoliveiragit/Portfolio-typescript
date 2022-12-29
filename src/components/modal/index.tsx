@@ -1,4 +1,4 @@
-import { Text, Box, Button } from "@chakra-ui/react";
+import { Text, Box, Divider } from "@chakra-ui/react";
 import React from "react";
 import useCopyToClipboard from "./content/copy";
 import { MdOutlineContentCopy } from "react-icons/md";
@@ -12,147 +12,349 @@ import { AiFillGithub } from "react-icons/ai";
 import { AiFillLinkedin } from "react-icons/ai";
 import { RxDiscordLogo } from "react-icons/rx";
 import AlertModal from "./content/alert";
-import Link from 'next/link'
+import Link from "next/link";
 
 type MyAttributes = {
   closemodal: () => void;
 } & React.HTMLAttributes<HTMLDivElement>;
 
-const BasicUsage: React.FC<MyAttributes> = ({closemodal}) => {
+const BasicUsage: React.FC<MyAttributes> = ({ closemodal }) => {
   const [value, copy] = useCopyToClipboard();
   return (
     <>
       <Box
-          onClick={closemodal}
-          position={"fixed"}
-          display={'flex'}
-          alignItems={'flex-start'}
-          justifyContent={'center'}
-          width={'100%'}
-          inset={'0px'}
-          padding={'14vh 16px 16px'}
-          bgColor={'rgba(0, 0, 0, 0.8)'}
-      >
-      </Box>
+        onClick={closemodal}
+        position={"fixed"}
+        display={"flex"}
+        alignItems={"flex-start"}
+        justifyContent={"center"}
+        width={"100%"}
+        inset={"0px"}
+        padding={"14vh 16px 16px"}
+        bgColor={"rgba(0, 0, 0, 0.8)"}
+      ></Box>
       <Box
-      left={'1px'}
-          width={'100%'}
-          fontSize={14}
-          maxWidth={"600px"}
-          position={"absolute"}
-          borderRadius={"35px"}
-          fontFamily={"Lexend"}
+        left={"1px"}
+        width={"100%"}
+        fontSize={14}
+        maxWidth={"600px"}
+        position={"absolute"}
+        borderRadius={"35px"}
+        fontFamily={"Lexend"}
+      >
+        <Box
+          p={"2%"}
+          background={"rgba(255, 255, 255, 0.068);"}
+          backdropFilter={"saturate(300%) blur(25px);"}
+          pl={3}
+          fontWeight={"300"}
+          borderRadius={"5px"}
+          color={"gray.400"}
+          w={"100%"}
+          h={"450px"}
+          overflowY={"scroll"}
         >
-          <Box
-            background={'rgba(255, 255, 255, 0.062);'}
-            backdropFilter={"saturate(300%) blur(25px);"}
-            pl={3}
-            fontWeight={"300"}
-            borderRadius={"5px"}
-            color={"gray.400"}
-            w={"100%"}
-            h={"450px"}
-            overflowY={"scroll"}
+            <Text
+            className="highlight"
+            justifyContent={"space-between"}
+            p={3}
+            gap={2}
+            display={"flex"}
+            m={"1%"}
           >
-            <Text
-              pt={"2%"}
-              m={"1%"}
-              fontWeight={"400"}
-              color={"white"}
-              fontSize={8}
-            >
-              GERAL
-            </Text>
-            <a
-              target="_blank"
-              href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSDbtnwFGgTJvbqZbCxwmBvSBXlSmbJjWXbHgdFtVhPSVqPqbZlgzdLWhfsJgHNpPgjLSCJK"
-              rel="noreferrer"
-            >
+            <Box gap={2} display={"flex"}>
+              <HiOutlineMail size={20} />
+              <Link target={'_blank'} href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSDbtnwFGgTJvbqZbCxwmBvSBXlSmbJjWXbHgdFtVhPSVqPqbZlgzdLWhfsJgHNpPgjLSCJK">Enviar email</Link>
+            </Box>
+            <Box>
               <Text
-                className="highlight"
-                p={1}
-                gap={3}
+                justifyContent={"center"}
                 display={"flex"}
-                m={"4% 1%"}
+                alignItems={"center"}
+                backgroundColor={"gray.600"}
+                borderRadius={"5px"}
+                fontWeight={"500"}
+                fontSize={14}
+                w={"20px"}
               >
-                <HiOutlineMail size={20} />
-                Enviar Email
+                E
               </Text>
-            </a>
-            <Text
+            </Box>
+          </Text>
+          <Text
+              onClick={() => copy("https://ryanvs.dev/")}
               className="highlight"
-              alignItems={"center"}
-              p={1}
-              gap={3}
+              justifyContent={"space-between"}
+              p={3}
+              gap={2}
               display={"flex"}
-              m={"4% 1%"}
+              m={"1%"}
             >
-              <MdOutlineContentCopy size={20} />
-              <Box onClick={() => copy("https://ryanvs.dev/")}>
+              <Box gap={2} display={"flex"}>
+                <AiOutlineHome size={20} />
                 <AlertModal />
               </Box>
+              <Box>
+                <Text
+                  justifyContent={"center"}
+                  display={"flex"}
+                  alignItems={"center"}
+                  backgroundColor={"gray.600"}
+                  borderRadius={"5px"}
+                  fontWeight={"500"}
+                  fontSize={14}
+                  w={"20px"}
+                >
+                  C
+                </Text>
+              </Box>
             </Text>
+
+
+
+
+
+          <Text
+            gap={3}
+            m={"1%"}
+            fontWeight={"400"}
+            color={"white"}
+            fontSize={8}
+          >
+            IR PARA
+          </Text>
+          <Divider w={"98%"} opacity={"10%"} />
+          <a href="http://localhost:3000/">
             <Text
-              gap={3}
-              m={"1%"}
-              fontWeight={"400"}
-              color={"white"}
-              fontSize={8}
-            >
-              IR PARA
-            </Text>
-            <a href="http://localhost:3000/">
-              <Text
-                className="highlight"
-                p={1}
-                gap={3}
-                display={"flex"}
-                m={"2%"}
-              >
-                <AiOutlineHome size={20} />
-                <Link href="/">Home</Link>
-              </Text>
-            </a>
-            <Text className="highlight" p={1} gap={3} display={"flex"} m={"4% 1%"}>
-              <BiUser size={20} />
-              <Link href="/sobre">Sobre</Link>
-            </Text>
-            <Text className="highlight" p={1} gap={3} display={"flex"} m={"4% 1%"}>
-              <RxCode size={20} />
-              <Link href="/projetos">Projetos</Link>
-            </Text>
-            <Text className="highlight" p={1} gap={3} display={"flex"} m={"4% 1%"}>
-              <MdOutlineComputer size={20} />
-              Setup
-            </Text>
-            <Text
-              gap={3}
+              className="highlight"
+              justifyContent={"space-between"}
+              p={3}
+              gap={2}
               display={"flex"}
               m={"1%"}
-              fontWeight={"400"}
-              color={"white"}
-              fontSize={8}
             >
-              SEGUIR
+              <Box gap={2} display={"flex"}>
+                <AiOutlineHome size={20} />
+                <Link href="/">Home</Link>
+              </Box>
+              <Box>
+                <Text
+                  justifyContent={"center"}
+                  display={"flex"}
+                  alignItems={"center"}
+                  backgroundColor={"gray.600"}
+                  borderRadius={"5px"}
+                  fontWeight={"500"}
+                  fontSize={14}
+                  w={"20px"}
+                >
+                  H
+                </Text>
+              </Box>
             </Text>
-            <Text className="highlight" p={1} gap={3} display={"flex"} m={"4% 1%"}>
+          </a>
+          <Text
+            className="highlight"
+            justifyContent={"space-between"}
+            p={3}
+            gap={2}
+            display={"flex"}
+            m={"1%"}
+          >
+            <Box gap={2} display={"flex"}>
+              <BiUser size={20} />
+              <Link href="/sobre">Sobre</Link>
+            </Box>
+            <Box>
+              <Text
+                justifyContent={"center"}
+                display={"flex"}
+                alignItems={"center"}
+                backgroundColor={"gray.600"}
+                borderRadius={"5px"}
+                fontWeight={"500"}
+                fontSize={14}
+                w={"20px"}
+              >
+                S
+              </Text>
+            </Box>
+          </Text>
+          <Text
+            className="highlight"
+            justifyContent={"space-between"}
+            p={3}
+            gap={2}
+            display={"flex"}
+            m={"1%"}
+          >
+            <Box gap={2} display={"flex"}>
+              <MdOutlineComputer size={20} />
+              <Link href="/projetos">Projetos</Link>
+            </Box>
+            <Box>
+              <Text
+                justifyContent={"center"}
+                display={"flex"}
+                alignItems={"center"}
+                backgroundColor={"gray.600"}
+                borderRadius={"5px"}
+                fontWeight={"500"}
+                fontSize={14}
+                w={"20px"}
+              >
+                P
+              </Text>
+            </Box>
+          </Text>
+          <Text
+            className="highlight"
+            justifyContent={"space-between"}
+            p={3}
+            gap={2}
+            display={"flex"}
+            m={"1%"}
+          >
+            <Box gap={2} display={"flex"}>
+              <RxCode size={20} />
+              <Link href="/setup">Setup</Link>
+            </Box>
+            <Box>
+              <Text
+                justifyContent={"center"}
+                display={"flex"}
+                alignItems={"center"}
+                backgroundColor={"gray.600"}
+                borderRadius={"5px"}
+                fontWeight={"500"}
+                fontSize={14}
+                w={"20px"}
+              >
+                S
+              </Text>
+            </Box>
+          </Text>
+          <Text
+            gap={3}
+            display={"flex"}
+            m={"1%"}
+            fontWeight={"400"}
+            color={"white"}
+            fontSize={8}
+          >
+            SEGUIR
+          </Text>
+          <Divider w={"98%"} opacity={"10%"} />
+          <Text
+            className="highlight"
+            justifyContent={"space-between"}
+            p={3}
+            gap={2}
+            display={"flex"}
+            m={"1%"}
+          >
+            <Box gap={2} display={"flex"}>
               <FaInstagram size={20} />
-              Instagram
-            </Text>
-            <Text className="highlight" p={1} gap={3} display={"flex"} m={"4% 1%"}>
+              <Link href="/setup">Instagram</Link>
+            </Box>
+            <Box>
+              <Text
+                justifyContent={"center"}
+                display={"flex"}
+                alignItems={"center"}
+                backgroundColor={"gray.600"}
+                borderRadius={"5px"}
+                fontWeight={"500"}
+                fontSize={14}
+                w={"20px"}
+              >
+                I
+              </Text>
+            </Box>
+          </Text>
+          <Text
+            className="highlight"
+            justifyContent={"space-between"}
+            p={3}
+            gap={2}
+            display={"flex"}
+            m={"1%"}
+          >
+            <Box gap={2} display={"flex"}>
               <AiFillGithub size={20} />
-              Github
-            </Text>
-            <Text className="highlight" p={1} gap={3} display={"flex"} m={"4% 1%"}>
+              <Link href="/setup">Github</Link>
+            </Box>
+            <Box>
+              <Text
+                justifyContent={"center"}
+                display={"flex"}
+                alignItems={"center"}
+                backgroundColor={"gray.600"}
+                borderRadius={"5px"}
+                fontWeight={"500"}
+                fontSize={14}
+                w={"20px"}
+              >
+                G
+              </Text>
+            </Box>
+          </Text>
+          <Text
+            className="highlight"
+            justifyContent={"space-between"}
+            p={3}
+            gap={2}
+            display={"flex"}
+            m={"1%"}
+          >
+            <Box gap={2} display={"flex"}>
               <AiFillLinkedin size={20} />
-              Linkedin
-            </Text>
-            <Text className="highlight" p={1} gap={3} display={"flex"} m={"4% 1%"}>
+              <Link href="/setup">Linkedin</Link>
+            </Box>
+            <Box>
+              <Text
+                justifyContent={"center"}
+                display={"flex"}
+                alignItems={"center"}
+                backgroundColor={"gray.600"}
+                borderRadius={"5px"}
+                fontWeight={"500"}
+                fontSize={14}
+                w={"20px"}
+              >
+                L
+              </Text>
+            </Box>
+          </Text>
+          <Text
+            className="highlight"
+            justifyContent={"space-between"}
+            p={3}
+            gap={2}
+            display={"flex"}
+            m={"1%"}
+          >
+            <Box gap={2} display={"flex"}>
               <RxDiscordLogo size={20} />
-              Discord
-            </Text>
-          </Box>
+              <Link href="/setup">Discord</Link>
+            </Box>
+            <Box>
+              <Text
+                justifyContent={"center"}
+                display={"flex"}
+                alignItems={"center"}
+                backgroundColor={"gray.600"}
+                borderRadius={"5px"}
+                fontWeight={"500"}
+                fontSize={14}
+                w={"20px"}
+              >
+                D
+              </Text>
+            </Box>
+          </Text>
         </Box>
+      </Box>
     </>
   );
 };
