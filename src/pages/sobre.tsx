@@ -26,10 +26,10 @@ export default function Sobre() {
           <Stack gap={4}>
             <Text lineHeight={5} fontSize={14} pt={"2%"} color={"gray.500"}>
               Meu nome é Ryan Oliveira e tenho <span>20</span> anos. <br />
-              Atualmente tenho adquirido <span>experiências</span> com estudos e desenvolvendo
-              projetos pessoais, tenho <br /> <span>conhecimentos</span> em:
-              HTML, CSS, JavaScript, TypeScript, Python, ChakraUi,
-              StyledComponent, NextJS, ReactJS.
+              Atualmente tenho adquirido <span>experiências</span> com estudos e
+              desenvolvendo projetos pessoais, tenho <br />{" "}
+              <span>conhecimentos</span> em: HTML, CSS, JavaScript, TypeScript,
+              Python, ChakraUi, StyledComponent, NextJS, ReactJS.
             </Text>
           </Stack>
         </div>

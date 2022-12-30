@@ -54,7 +54,7 @@ const BasicUsage: React.FC<MyAttributes> = ({ closemodal }) => {
           h={"450px"}
           overflowY={"scroll"}
         >
-            <Text
+          <Text
             className="highlight"
             justifyContent={"space-between"}
             p={3}
@@ -64,7 +64,12 @@ const BasicUsage: React.FC<MyAttributes> = ({ closemodal }) => {
           >
             <Box gap={2} display={"flex"}>
               <HiOutlineMail size={20} />
-              <Link target={'_blank'} href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSDbtnwFGgTJvbqZbCxwmBvSBXlSmbJjWXbHgdFtVhPSVqPqbZlgzdLWhfsJgHNpPgjLSCJK">Enviar email</Link>
+              <Link
+                target={"_blank"}
+                href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSDbtnwFGgTJvbqZbCxwmBvSBXlSmbJjWXbHgdFtVhPSVqPqbZlgzdLWhfsJgHNpPgjLSCJK"
+              >
+                Enviar email
+              </Link>
             </Box>
             <Box>
               <Text
@@ -82,37 +87,33 @@ const BasicUsage: React.FC<MyAttributes> = ({ closemodal }) => {
             </Box>
           </Text>
           <Text
-              onClick={() => copy("https://ryanvs.dev/")}
-              className="highlight"
-              justifyContent={"space-between"}
-              p={3}
-              gap={2}
-              display={"flex"}
-              m={"1%"}
-            >
-              <Box gap={2} display={"flex"}>
-                <AiOutlineHome size={20} />
-                <AlertModal />
-              </Box>
-              <Box>
-                <Text
-                  justifyContent={"center"}
-                  display={"flex"}
-                  alignItems={"center"}
-                  backgroundColor={"gray.600"}
-                  borderRadius={"5px"}
-                  fontWeight={"500"}
-                  fontSize={14}
-                  w={"20px"}
-                >
-                  C
-                </Text>
-              </Box>
-            </Text>
-
-
-
-
+            onClick={() => copy("https://ryanvs.dev/")}
+            className="highlight"
+            justifyContent={"space-between"}
+            p={3}
+            gap={2}
+            display={"flex"}
+            m={"1%"}
+          >
+            <Box gap={2} display={"flex"}>
+              <AiOutlineHome size={20} />
+              <AlertModal />
+            </Box>
+            <Box>
+              <Text
+                justifyContent={"center"}
+                display={"flex"}
+                alignItems={"center"}
+                backgroundColor={"gray.600"}
+                borderRadius={"5px"}
+                fontWeight={"500"}
+                fontSize={14}
+                w={"20px"}
+              >
+                C
+              </Text>
+            </Box>
+          </Text>
 
           <Text
             gap={3}

@@ -6,7 +6,7 @@ import {
   Link,
   Stack,
   Text,
-  useColorModeValue
+  useColorModeValue,
 } from "@chakra-ui/react";
 import { NavItem } from ".";
 

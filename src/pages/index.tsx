@@ -1,9 +1,17 @@
-import { Flex, Center, Text, Stack, Box, Container, useDisclosure } from "@chakra-ui/react";
+import {
+  Flex,
+  Center,
+  Text,
+  Stack,
+  Box,
+  Container,
+  useDisclosure,
+} from "@chakra-ui/react";
 import Header from "../components/header";
 import SmallWithNavigation from "../components/footer";
 import { useState, useEffect, useRef } from "react";
 import BasicUsage from "../components/modal";
-import { Fade, ScaleFade, Slide, SlideFade } from '@chakra-ui/react'
+import { Fade, ScaleFade, Slide, SlideFade } from "@chakra-ui/react";
 
 export default function Home() {
   const { isOpen, onToggle } = useDisclosure();
@@ -20,13 +28,13 @@ export default function Home() {
     };
   }, []);
   const handleClick = () => {
-    onToggle()
-    setIsComponentVisible(true)
-  }
+    onToggle();
+    setIsComponentVisible(true);
+  };
   const handleClickClose = () => {
-    onToggle()
-    setIsComponentVisible(false)
-  }
+    onToggle();
+    setIsComponentVisible(false);
+  };
 
   const ref = useRef<HTMLDivElement>(null);
   useEffect(() => {
@@ -51,22 +59,27 @@ export default function Home() {
   return (
     <>
       <Header />
-      <Container display={'flex'} flexDirection={'column'} min-height={'100vh'} position={'relative'}>
-        
+      <Container
+        display={"flex"}
+        flexDirection={"column"}
+        min-height={"100vh"}
+        position={"relative"}
+      >
         <Flex
           fontFamily={"Lexend"}
-          minHeight={'75vh'}
+          minHeight={"75vh"}
           justify-content={"center"}
           w={"100%"}
         >
-          <Box  mt={'35px'}>
-          <Fade transition={{ enter: { duration: .3 }, exit: { duration: .3 } }} in={isOpen}>
-                  {isComponentVisible && (
-                    <BasicUsage
-                      closemodal={() => handleClickClose()}
-                    />
-                  )}
-              </Fade>
+          <Box mt={"35px"}>
+            <Fade
+              transition={{ enter: { duration: 0.3 }, exit: { duration: 0.3 } }}
+              in={isOpen}
+            >
+              {isComponentVisible && (
+                <BasicUsage closemodal={() => handleClickClose()} />
+              )}
+            </Fade>
           </Box>
           <Center fontSize={43}>
             <Stack
@@ -88,12 +101,11 @@ export default function Home() {
                 Front-end Developer | accessibility and end-user experience.
               </Text>
               <Text fontSize="md" fontWeight={"300"} color={"gray.500"}>
-                 <Text as={'i'}>For me, everything is a challenge that can be discovered.</Text>
+                <Text as={"i"}>
+                  For me, everything is a challenge that can be discovered.
+                </Text>
               </Text>
-              <button
-                onClick={() => handleClick()}
-                className="buttonHome"
-              >
+              <button onClick={() => handleClick()} className="buttonHome">
                 Pressione <kbd className="kbd">ctrl</kbd>{" "}
                 <kbd className="kbd">C</kbd> para iniciar →
               </button>

@@ -8,7 +8,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import { NAV_ITEMS } from ".";
-import NextLink from 'next/link'
+import NextLink from "next/link";
 import DesktopSubNav from "./DesktopSubNav";
 
 const DesktopNav = () => {
@@ -28,15 +28,14 @@ const DesktopNav = () => {
                 p={4}
                 href={navItem.href ?? "#"}
                 fontSize={"12px"}
-                letterSpacing={'1.2px'}
+                letterSpacing={"1.2px"}
                 fontWeight={500}
                 color={linkColor}
-                textDecoration={'none'}
-                className={'animate'}
+                textDecoration={"none"}
+                className={"animate"}
               >
                 {navItem.label}
               </Link>
-              
             </PopoverTrigger>
 
             {navItem.children && (
