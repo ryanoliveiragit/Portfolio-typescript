@@ -54,12 +54,6 @@ export const NAV_ITEMS: NavItemProps[] = [
 export default function Header() {
   const { isOpen, onToggle } = useDisclosure();
   const [isComponentVisible, setIsComponentVisible] = useState(false);
-  const handleKeyDown = (event: KeyboardEvent) => {
-    if (event.ctrlKey && event.key === "c") {
-      setIsComponentVisible(true);
-    }
-    
-  };
   return (
     <>
       <Flex

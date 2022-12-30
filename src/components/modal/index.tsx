@@ -54,6 +54,28 @@ const BasicUsage: React.FC<MyAttributes> = ({ closemodal }) => {
           h={"450px"}
           overflowY={"scroll"}
         >
+          <Text p={2} justifyContent={"space-between"} display={"flex"}>
+            <Box display={"flex"}>
+              <Text fontWeight={"400"} color={"white"} fontSize={8}>
+                GERAL
+              </Text>
+            </Box>
+            <Box>
+              <Text
+                justifyContent={"center"}
+                display={"flex"}
+                alignItems={"center"}
+                borderRadius={"5px"}
+                fontWeight={"400"}
+                color={"white"}
+                fontSize={8}
+                w={"60px"}
+              >
+                PRESS
+              </Text>
+            </Box>
+          </Text>
+          <Divider w={"98%"} opacity={"10%"} />
           <Text
             className="highlight"
             justifyContent={"space-between"}
@@ -99,18 +121,18 @@ const BasicUsage: React.FC<MyAttributes> = ({ closemodal }) => {
               <AiOutlineHome size={20} />
               <AlertModal />
             </Box>
-            <Box>
+            <Box display={"block"}>
               <Text
                 justifyContent={"center"}
                 display={"flex"}
                 alignItems={"center"}
+                w={"55px"}
                 backgroundColor={"gray.600"}
                 borderRadius={"5px"}
                 fontWeight={"500"}
                 fontSize={14}
-                w={"20px"}
               >
-                C
+                Alt + C
               </Text>
             </Box>
           </Text>
@@ -125,35 +147,33 @@ const BasicUsage: React.FC<MyAttributes> = ({ closemodal }) => {
             IR PARA
           </Text>
           <Divider w={"98%"} opacity={"10%"} />
-          <a href="http://localhost:3000/">
-            <Text
-              className="highlight"
-              justifyContent={"space-between"}
-              p={3}
-              gap={2}
-              display={"flex"}
-              m={"1%"}
-            >
-              <Box gap={2} display={"flex"}>
-                <AiOutlineHome size={20} />
-                <Link href="/">Home</Link>
-              </Box>
-              <Box>
-                <Text
-                  justifyContent={"center"}
-                  display={"flex"}
-                  alignItems={"center"}
-                  backgroundColor={"gray.600"}
-                  borderRadius={"5px"}
-                  fontWeight={"500"}
-                  fontSize={14}
-                  w={"20px"}
-                >
-                  H
-                </Text>
-              </Box>
-            </Text>
-          </a>
+          <Text
+            className="highlight"
+            justifyContent={"space-between"}
+            p={3}
+            gap={2}
+            display={"flex"}
+            m={"1%"}
+          >
+            <Box gap={2} display={"flex"}>
+              <AiOutlineHome size={20} />
+              <Link href="/">Home</Link>
+            </Box>
+            <Box>
+              <Text
+                justifyContent={"center"}
+                display={"flex"}
+                alignItems={"center"}
+                backgroundColor={"gray.600"}
+                borderRadius={"5px"}
+                fontWeight={"500"}
+                fontSize={14}
+                w={"20px"}
+              >
+                H
+              </Text>
+            </Box>
+          </Text>
           <Text
             className="highlight"
             justifyContent={"space-between"}
@@ -229,9 +249,9 @@ const BasicUsage: React.FC<MyAttributes> = ({ closemodal }) => {
                 borderRadius={"5px"}
                 fontWeight={"500"}
                 fontSize={14}
-                w={"20px"}
+                w={"55px"}
               >
-                S
+                Alt + S
               </Text>
             </Box>
           </Text>
