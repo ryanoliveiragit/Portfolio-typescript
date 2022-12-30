@@ -8,15 +8,69 @@ import {
   SimpleGrid,
   Center,
   Container,
+  useDisclosure,
 } from "@chakra-ui/react";
 import Header from "../components/header";
 import SmallWithNavigation from "../components/footer";
 import React, { useState, useEffect } from "react";
 import { Spinner } from "@chakra-ui/react";
+import useCopyToClipboard from "../components/modal/content/copy";
 
 export default function Sobre() {
   const [repositoreis, setRepositories] = useState<any[]>([]);
   const [removeLoading, setRemoveLoading] = useState(true);
+  const [value, copy] = useCopyToClipboard();
+
+  const [isComponentVisible, setIsComponentVisible] = useState(false);
+  const handleKeyDown = (event: KeyboardEvent) => {
+    if (event.ctrlKey && event.key === "c") {
+      setIsComponentVisible(true);
+    }
+  };
+
+  const shortcutsHand = (event: KeyboardEvent) => {
+    if (event.altKey && event.key === "c") {
+      copy("www.ryanvs.dev/");
+    }
+    if (event.key == "e") {
+      window.open(
+        "https://mail.google.com/mail/u/0/#inbox?compose=CllgCJTNqVmWVnQJqKwjHbgqBKcjWVwtgZwfDkfdQMXLXsbgWCRgBSfVfnLRSZVPSfdXnsmMmkL"
+      );
+    }
+    if (event.key == "h") {
+      window.location.href = "/";
+    }
+    if (event.key == "s") {
+      window.location.href = "/sobre";
+    }
+    if (event.key == "p") {
+      window.location.href = "/projetos";
+    }
+    if (event.altKey && event.key == "s") {
+      window.location.href = "/setup";
+    }
+    if (event.key == "i") {
+      window.open("https://www.instagram.com/ryan.jsx/");
+    }
+    if (event.key == "g") {
+      window.open("https://github.com/ryanoliveiragit");
+    }
+    if (event.key == "l") {
+      window.open("https://www.linkedin.com/in/ryan-oliveira-169a371a4/");
+    }
+    if (event.key == "d") {
+      window.open("https://discord.gg/nD3YgMYhre");
+    }
+  };
+  useEffect(() => {
+    document.addEventListener("keydown", shortcutsHand);
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.addEventListener("keydown", shortcutsHand);
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   useEffect(() => {
     setTimeout(() => {
       fetch("https://api.github.com/users/ryanoliveiragit/repos")

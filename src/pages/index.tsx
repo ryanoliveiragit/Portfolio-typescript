@@ -65,6 +65,7 @@ export default function Home() {
       document.addEventListener("keydown", shortcutsHand);
       document.removeEventListener("keydown", handleKeyDown);
     };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   const handleClick = () => {
     onToggle();
