@@ -19,6 +19,7 @@ export default function Home() {
   const handleKeyDown = (event: KeyboardEvent) => {
     if (event.ctrlKey && event.key === "c") {
       setIsComponentVisible(true);
+      onToggle();
     }
   };
   useEffect(() => {
