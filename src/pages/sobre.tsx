@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
-import { Text, Stack } from "@chakra-ui/react";
+import { Text, Stack, Container, Box } from "@chakra-ui/react";
 import Header from "../components/header";
-import { Container } from "../components/layout";
 import React, { useEffect, useState } from "react";
 import SmallWithNavigation from "../components/footer";
 import useCopyToClipboard from "../components/modal/content/copy";
@@ -62,7 +61,7 @@ export default function Sobre() {
   return (
     <>
       <Header />
-      <Container>
+      <Container mb={'2%'} mt={"2%"}>
         <Text
           alignItems={"left"}
           className={"gradientMobile"}
@@ -72,24 +71,47 @@ export default function Sobre() {
         >
           sobre mim.
         </Text>
-        <img
-          src="https://cdn.discordapp.com/attachments/695348516918263819/1057103495800553553/b613fb8e-6283-4612-9eb5-9d5eab03a90a.png"
-          alt=""
-        />
-        <div className="photo">
-          <Stack gap={4}>
-            <Text lineHeight={5} fontSize={14} pt={"2%"} color={"gray.500"}>
-              Meu nome é Ryan Oliveira e tenho <span>20</span> anos. <br />
+        <Box className="fleximg" w={"100%"}>
+          <img
+            src="https://cdn.discordapp.com/attachments/695348516918263819/1057103495800553553/b613fb8e-6283-4612-9eb5-9d5eab03a90a.png"
+            alt=""
+          />
+          <Stack>
+            <Text
+            className="flextxt"
+              lineHeight={5}
+              fontSize={14}
+              color={"gray.500"}
+            >
+              <span>Olá,</span> Meu nome é Ryan Oliveira e tenho <span>20</span> anos. <br />
+            </Text>
+            <Text
+            className="flextxt"
+              lineHeight={5}
+              fontSize={14}
+              color={"gray.500"}
+            >
               Atualmente tenho adquirido <span>experiências</span> com estudos e
-              desenvolvendo projetos pessoais, tenho <br />{" "}
+              desenvolvendo projetos pessoais
+            </Text>
+            <Text lineHeight={5}
+            className="flextxt"
+              fontSize={14}
+              color={"gray.500"}>
               <span>conhecimentos</span> em: HTML, CSS, JavaScript, TypeScript,
               Python, ChakraUi, StyledComponent, NextJS, ReactJS.
             </Text>
+            <Text lineHeight={5}
+            className="flextxt"
+              fontSize={14}
+              color={"gray.500"}>
+              <span>Conceitos de:</span> SSR, SSG, SPA e SEO.
+            </Text>
           </Stack>
-        </div>
+        </Box>
         <div className="photo">
           <Stack>
-            <Text fontSize={24} fontWeight={"600"} color={"gray.100"}>
+            <Text mt={'0.5%'} fontSize={24} fontWeight={"600"} color={"gray.100"}>
               Bio
             </Text>
             <Text color={"gray.500"} fontSize={14}>

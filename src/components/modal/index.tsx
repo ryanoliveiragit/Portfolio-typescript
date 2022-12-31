@@ -238,7 +238,7 @@ const BasicUsage: React.FC<MyAttributes> = ({ closemodal }) => {
           >
             <Box gap={2} display={"flex"}>
               <RxCode size={20} />
-              <Link href="/setup">Setup</Link>
+              <Link href="/contato">Contato</Link>
             </Box>
             <Box>
               <Text

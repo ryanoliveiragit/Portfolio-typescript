@@ -42,6 +42,12 @@ span {
   color: white;
 
 }
+.fleximg{
+  display: flex;
+}
+.flextxt {
+  padding: 1% 4%;
+}
 option {
 padding: 2%!important;
 background-color: #181717e8!important;
@@ -164,15 +170,22 @@ background-color: #181717e8!important;
   display: block;
 }
 img {
-  width: 45%;
+  width: 50%;
   border-radius: 15px;
   padding-bottom: 0%;
 }
 
-@media only screen and (max-width: 1300px) {
+@media only screen and (max-width: 900px) {
   .photo {
     display: block;
     padding-bottom: 5%;
+    
+  }
+  .fleximg {
+    display: block;
+  }
+  .flextxt {
+    padding: 1% 0%;
   }
   img {
     width: 100%;

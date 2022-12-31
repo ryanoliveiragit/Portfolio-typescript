@@ -42,10 +42,6 @@ export const NAV_ITEMS: NavItemProps[] = [
     href: "projetos",
   },
   {
-    label: "SETUP",
-    href: "setup",
-  },
-  {
     label: "CONTATO",
     href: "contato",
   },

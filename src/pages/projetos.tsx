@@ -77,7 +77,7 @@ export default function Sobre() {
         .then((response: { json: () => any }) => response.json())
         .then((data) => setRepositories(data));
       setRemoveLoading(false);
-    }, 1000);
+    }, 100);
   }, []);
   const Astethic = repositoreis.filter(
     (repositorys) => repositorys.id == "520384346"
