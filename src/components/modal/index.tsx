@@ -51,7 +51,6 @@ const BasicUsage: React.FC<MyAttributes> = ({ closemodal }) => {
           borderRadius={"5px"}
           color={"gray.400"}
           w={"100%"}
-          border={'1px solid #7105ff'}
           h={"450px"}
           overflowY={"scroll"}
         >
