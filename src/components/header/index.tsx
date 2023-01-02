@@ -109,7 +109,7 @@ export default function Header() {
       <Collapse in={isOpen} animateOpacity>
         <MobileNav />
       </Collapse>
-      <Center w={'100%'}>
+      <Center ml={'1%'} w={'100%'}>
       <Box zIndex={'10'} className="margin"> 
       {isComponentVisible && <BasicUsage closemodal={() =>setIsComponentVisible(false)}/>}
       </Box>

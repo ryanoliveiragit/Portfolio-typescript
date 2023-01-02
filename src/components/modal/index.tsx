@@ -34,10 +34,11 @@ const BasicUsage: React.FC<MyAttributes> = ({ closemodal }) => {
         bgColor={"rgba(0, 0, 0, 0.8)"}
       ></Box>
       <Box
+        top={'2%'}
         left={"1px"}
         width={"100%"}
         fontSize={14}
-        maxWidth={"600px"}
+        maxWidth={"500px"}
         position={"absolute"}
         borderRadius={"35px"}
         fontFamily={"Lexend"}

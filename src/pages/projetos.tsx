@@ -15,12 +15,22 @@ import SmallWithNavigation from "../components/footer";
 import React, { useState, useEffect } from "react";
 import { Spinner } from "@chakra-ui/react";
 import useCopyToClipboard from "../components/modal/content/copy";
+import { NextSeo } from "next-seo";
+import { bio } from "../utils/bio";
+
 
 export default function Sobre() {
+  useEffect(() => {
+    setTimeout(() => {
+      fetch("https://api.github.com/users/ryanoliveiragit/repos")
+        .then((response: { json: () => any }) => response.json())
+        .then((data) => setRepositories(data));
+      setRemoveLoading(false);
+    }, 100);
+  }, []);
   const [repositoreis, setRepositories] = useState<any[]>([]);
   const [removeLoading, setRemoveLoading] = useState(true);
   const [value, copy] = useCopyToClipboard();
-
   const [isComponentVisible, setIsComponentVisible] = useState(false);
   const handleKeyDown = (event: KeyboardEvent) => {
     if (event.ctrlKey && event.key === "c") {
@@ -71,14 +81,6 @@ export default function Sobre() {
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  useEffect(() => {
-    setTimeout(() => {
-      fetch("https://api.github.com/users/ryanoliveiragit/repos")
-        .then((response: { json: () => any }) => response.json())
-        .then((data) => setRepositories(data));
-      setRemoveLoading(false);
-    }, 100);
-  }, []);
   const Astethic = repositoreis.filter(
     (repositorys) => repositorys.id == "520384346"
   );
@@ -96,6 +98,11 @@ export default function Sobre() {
   );
   return (
     <>
+    <NextSeo 
+    title="Projetos - Ryan Oliveira Brito - Front-end Developer"
+    description={bio}
+    canonical='https://www.ryanvs.dev/'
+    />
       <Header />
       <Container>
         <Center display={"column"}>
@@ -303,7 +310,4 @@ export default function Sobre() {
       <SmallWithNavigation />
     </>
   );
-}
-function then(arg0: (items: any) => void) {
-  throw new Error("Function not implemented.");
 }

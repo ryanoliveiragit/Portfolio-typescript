@@ -20,10 +20,10 @@ export default function SmallWithNavigation() {
         justify={{ base: 'center', md: 'space-between' }}
         align={{ base: 'center', md: 'center' }}>
         <Stack direction={'row'} spacing={6}>
-          <Link href={'#'}>linkedin</Link>
-          <Link href={'#'}>Instagram</Link>
-          <Link href={'#'}>github</Link>
-          <Link href={'#'}>discord</Link>
+          <Link target={'_blank'} href={'https://www.linkedin.com/in/ryan-oliveira-169a371a4/'}>linkedin</Link>
+          <Link target={'_blank'} href={'https://www.instagram.com/ryan.jsx/'}>Instagram</Link>
+          <Link target={'_blank'} href={'https://github.com/ryanoliveiragit'}>github</Link>
+          <Link target={'_blank'} href={'https://discord.com/invite/nD3YgMYhre'}>discord</Link>
         </Stack>
       </Container>
     </Box>

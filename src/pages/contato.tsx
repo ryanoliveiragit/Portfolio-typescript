@@ -14,6 +14,8 @@ import { AiFillLinkedin } from "react-icons/ai";
 import { RxDiscordLogo } from "react-icons/rx";
 import SmallWithNavigation from "../components/footer";
 import useCopyToClipboard from "../components/modal/content/copy";
+import { NextSeo } from "next-seo";
+import { bio } from "../utils/bio";
 
 export default function Sobre() {
   const [value, copy] = useCopyToClipboard();
@@ -70,6 +72,11 @@ export default function Sobre() {
   }, []);
   return (
     <>
+    <NextSeo 
+    title="Ryan Oliveira Brito - Front-end Developer"
+    description={bio}
+    canonical='https://www.ryanvs.dev/'
+    />
       <Header />
       <Container mt={'13%'} mb={'35vh'}>
         <Text

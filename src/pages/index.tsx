@@ -1,3 +1,5 @@
+import { NextSeo } from "next-seo";
+
 import {
   Flex,
   Center,
@@ -11,9 +13,9 @@ import Header from "../components/header";
 import SmallWithNavigation from "../components/footer";
 import { useState, useEffect, useRef } from "react";
 import BasicUsage from "../components/modal";
-import { Fade, ScaleFade, Slide, SlideFade } from "@chakra-ui/react";
-import useCopyToClipboard from '../components/modal/content/copy'
-import Link from "next/link";
+import { Fade } from "@chakra-ui/react";
+import useCopyToClipboard from "../components/modal/content/copy";
+import { bio } from "../utils/bio";
 
 export default function Home() {
   const [value, copy] = useCopyToClipboard();
@@ -25,25 +27,26 @@ export default function Home() {
       onToggle();
     }
   };
-
   const shortcutsHand = (event: KeyboardEvent) => {
     if (event.altKey && event.key === "c") {
-      copy('www.ryanvs.dev/')
+      copy("www.ryanvs.dev/");
     }
-    if (event.key == "e"){
-      window.open("https://mail.google.com/mail/u/0/#inbox?compose=CllgCJTNqVmWVnQJqKwjHbgqBKcjWVwtgZwfDkfdQMXLXsbgWCRgBSfVfnLRSZVPSfdXnsmMmkL");
+    if (event.key == "e") {
+      window.open(
+        "https://mail.google.com/mail/u/0/#inbox?compose=CllgCJTNqVmWVnQJqKwjHbgqBKcjWVwtgZwfDkfdQMXLXsbgWCRgBSfVfnLRSZVPSfdXnsmMmkL"
+      );
     }
     if (event.key == "h") {
-      window.location.href = "/"
+      window.location.href = "/";
     }
     if (event.key == "s") {
-      window.location.href = "/sobre"
+      window.location.href = "/sobre";
     }
     if (event.key == "p") {
-      window.location.href = "/projetos"
+      window.location.href = "/projetos";
     }
     if (event.altKey && event.key == "s") {
-      window.location.href = "/setup"
+      window.location.href = "/setup";
     }
     if (event.key == "i") {
       window.open("https://www.instagram.com/ryan.jsx/");
@@ -65,7 +68,7 @@ export default function Home() {
       document.addEventListener("keydown", shortcutsHand);
       document.removeEventListener("keydown", handleKeyDown);
     };
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   const handleClick = () => {
     onToggle();
@@ -86,18 +89,26 @@ export default function Home() {
         setIsComponentVisible(false);
       }
     };
-
     // Adiciona o manipulador de eventos "click" ao documento
     document.addEventListener("click", handleClick);
-
     // Retorna uma função de limpeza para remover o manipulador de eventos quando o componente for desmontado
     return () => {
       document.removeEventListener("click", handleClick);
     };
   }, [ref]);
-
   return (
     <>
+      <NextSeo
+        title="Ryan Oliveira Brito - Front-end Developer"
+        description={bio}
+        canonical="https://www.ryanvs.dev/"
+        openGraph={{
+          url: "https://www.ryanvs.dev/",
+          title: "Ryan Oliveira Brito - Front-end Developer",
+          description: `${bio}`,
+          site_name: "Ryan Oliveira Brito - Front-end Developer",
+        }}
+      />
       <Header />
       <Container
         display={"flex"}
@@ -113,7 +124,7 @@ export default function Home() {
         >
           <Box mt={"35px"}>
             <Fade
-              transition={{ enter: { duration: 0.3 }, exit: { duration: 0.3 } }}
+              transition={{ enter: { duration: 0.1 }, exit: { duration: 0.1 } }}
               in={isOpen}
             >
               {isComponentVisible && (
@@ -138,7 +149,7 @@ export default function Home() {
                 {"Ryan Oliveira"}
               </Text>
               <Text fontSize="md" color={"white"}>
-                Front-end Developer | accessibility and end-user experience.
+                {bio}
               </Text>
               <Text fontSize="md" fontWeight={"300"} color={"gray.500"}>
                 <Text as={"i"}>

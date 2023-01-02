@@ -4,6 +4,8 @@ import Header from "../components/header";
 import React, { useEffect, useState } from "react";
 import SmallWithNavigation from "../components/footer";
 import useCopyToClipboard from "../components/modal/content/copy";
+import { NextSeo } from "next-seo";
+import { bio } from '../utils/bio'
 
 export default function Sobre() {
   const [value, copy] = useCopyToClipboard();
@@ -60,6 +62,11 @@ export default function Sobre() {
   }, []);
   return (
     <>
+    <NextSeo 
+    title="Sobre - Ryan Oliveira Brito - Front-end Developer"
+    description={bio}
+    canonical='https://www.ryanvs.dev/'
+    />
       <Header />
       <Container mb={'2%'} mt={"2%"}>
         <Text
