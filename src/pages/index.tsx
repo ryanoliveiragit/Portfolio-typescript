@@ -8,6 +8,7 @@ import {
   Box,
   Container,
   useDisclosure,
+  theme,
 } from "@chakra-ui/react";
 import Header from "../components/header";
 import SmallWithNavigation from "../components/footer";
@@ -16,6 +17,7 @@ import BasicUsage from "../components/modal";
 import { Fade } from "@chakra-ui/react";
 import useCopyToClipboard from "../components/modal/content/copy";
 import { bio } from "../utils/bio";
+import { text } from "stream/consumers";
 
 export default function Home() {
   const [value, copy] = useCopyToClipboard();
@@ -123,14 +125,9 @@ export default function Home() {
           w={"100%"}
         >
           <Box mt={"35px"}>
-            <Fade
-              transition={{ enter: { duration: 0.1 }, exit: { duration: 0.1 } }}
-              in={isOpen}
-            >
               {isComponentVisible && (
                 <BasicUsage closemodal={() => handleClickClose()} />
               )}
-            </Fade>
           </Box>
           <Center fontSize={43}>
             <Stack
@@ -143,7 +140,7 @@ export default function Home() {
               <Text
                 fontSize={38}
                 fontWeight={"500"}
-                className="gradient"
+                color={"principal.100"}
                 letterSpacing={-1}
               >
                 {"Ryan Oliveira"}

@@ -2,9 +2,15 @@
 .rgb {
   color: aqua;
 }
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
 body {
+  transition: all 0.3s;
   padding: 1% 5%;
-  background-color:#08060cf1 !important;
+  background-color:#07060af1 !important;
   
 }
 span {
@@ -23,7 +29,7 @@ span {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #644fd8;
+  background-color: #deff02;;
   border-radius: 25px;
 }
 
@@ -32,14 +38,13 @@ span {
 }
 
 ::-webkit-scrollbar-thumb:active {
-  background-color: #cf689b;
+  background-color: #b7d301;;
 }
 .highlight:hover {
-  background-color: #644fd8;
   cursor: pointer;
   border-radius: 10px;
   transition: 0.4s;
-  color: white;
+  color: #deff02;
 
 }
 .fleximg{
@@ -69,7 +74,7 @@ background-color: #181717e8!important;
 }
 .gradientApiGit {
   /* Primeiro passo: definir um degradê como fundo */
-  background-image: linear-gradient(115deg, #80d7ff, #05ff50);
+  background-image: linear-gradient(115deg, #ffffff, #dadada);
   
   /* Segundo passo: apagar do fundo tudo que não estiver imediatamente atrás de texto */
   background-clip: text;
@@ -113,19 +118,19 @@ background-color: #181717e8!important;
 }
 .buttonHome {
   color: white;
-  padding: .5% .2%;
+  padding: 2% 1%;
   font-size: 15px;
   max-width: fit-content;
   font-weight: 600;
   text-align: start;
   border-radius: 5px;
-  transition: .5s;
+  transition: background-color .2s linear;
 }
 .buttonHome:hover {
   background-color: rgb(56, 56, 56);
 }
 .container {
-  padding: 1% 30%;
+  padding: .8% 30%;
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
@@ -140,7 +145,6 @@ background-color: #181717e8!important;
 .animate:hover {
   color: rgb(255, 255, 255);
 }
-
 .animate::before {
   content: "";
   position: absolute;
@@ -149,7 +153,7 @@ background-color: #181717e8!important;
   height: 1px;
   bottom: 10px;
   left: 0;
-  background-image: linear-gradient(135deg, #ff8080, #ff05ea);
+  background-color: #deff02;
   transform: scaleX(0);
   transform-origin: top left;
   transition: transform 0.3s ease;
@@ -158,7 +162,7 @@ background-color: #181717e8!important;
   width: 50%;
   margin-left: 15%;
   position: relative;
-  background-color: red;
+
 }
 .animate:hover::before {
   transform: scaleX(1);

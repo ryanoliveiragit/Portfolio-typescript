@@ -10,6 +10,9 @@ const colors = {
   green: {
     900: '#1E1E1E',
     500: '#34D399'
+  },
+  principal: {
+    100: '#deff02'
   }
 }
 

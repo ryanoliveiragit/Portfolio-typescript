@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react";
 import SmallWithNavigation from "../components/footer";
 import useCopyToClipboard from "../components/modal/content/copy";
 import { NextSeo } from "next-seo";
-import { bio } from '../utils/bio'
+import { bio } from "../utils/bio";
 
 export default function Sobre() {
   const [value, copy] = useCopyToClipboard();
@@ -62,19 +62,18 @@ export default function Sobre() {
   }, []);
   return (
     <>
-    <NextSeo 
-    title="Sobre - Ryan Oliveira Brito - Front-end Developer"
-    description={bio}
-    canonical='https://www.ryanvs.dev/'
-    />
+      <NextSeo
+        title="Sobre - Ryan Oliveira Brito - Front-end Developer"
+        description={bio}
+        canonical="https://www.ryanvs.dev/"
+      />
       <Header />
-      <Container mb={'2%'} mt={"2%"}>
+      <Container mb={"2%"} mt={"2%"}>
         <Text
           alignItems={"left"}
-          className={"gradientMobile"}
           fontWeight={"700"}
           fontSize={24}
-          color={"gray.500"}
+          color={"principal.100"}
         >
           sobre mim.
         </Text>
@@ -85,15 +84,16 @@ export default function Sobre() {
           />
           <Stack>
             <Text
-            className="flextxt"
+              className="flextxt"
               lineHeight={5}
               fontSize={14}
               color={"gray.500"}
             >
-              <span>Olá,</span> Meu nome é Ryan Oliveira e tenho <span>20</span> anos. <br />
+              <span>Olá,</span> Meu nome é Ryan Oliveira e tenho <span>20</span>{" "}
+              anos. <br />
             </Text>
             <Text
-            className="flextxt"
+              className="flextxt"
               lineHeight={5}
               fontSize={14}
               color={"gray.500"}
@@ -101,24 +101,33 @@ export default function Sobre() {
               Atualmente tenho adquirido <span>experiências</span> com estudos e
               desenvolvendo projetos pessoais
             </Text>
-            <Text lineHeight={5}
-            className="flextxt"
+            <Text
+              lineHeight={5}
+              className="flextxt"
               fontSize={14}
-              color={"gray.500"}>
+              color={"gray.500"}
+            >
               <span>conhecimentos</span> em: HTML, CSS, JavaScript, TypeScript,
               Python, ChakraUi, StyledComponent, NextJS, ReactJS.
             </Text>
-            <Text lineHeight={5}
-            className="flextxt"
+            <Text
+              lineHeight={5}
+              className="flextxt"
               fontSize={14}
-              color={"gray.500"}>
+              color={"gray.500"}
+            >
               <span>Conceitos de:</span> SSR, SSG, SPA e SEO.
             </Text>
           </Stack>
         </Box>
         <div className="photo">
           <Stack>
-            <Text mt={'0.5%'} fontSize={24} fontWeight={"600"} color={"gray.100"}>
+            <Text
+              mt={"0.5%"}
+              fontSize={24}
+              fontWeight={"600"}
+              color={"gray.100"}
+            >
               Bio
             </Text>
             <Text color={"gray.500"} fontSize={14}>
@@ -161,7 +170,7 @@ export default function Sobre() {
               >
                 <u>Mutant</u>
               </a>{" "}
-              • Barra-funda, SP nov 2017 <br />
+              • Barra-funda, SP <br />
               sep 2022 – Momento
             </Text>
           </Stack>

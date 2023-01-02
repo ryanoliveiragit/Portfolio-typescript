@@ -81,10 +81,9 @@ export default function Sobre() {
       <Container mt={'13%'} mb={'35vh'}>
         <Text
           alignItems={"left"}
-          className={"gradientMobile"}
           fontWeight={"700"}
           fontSize={24}
-          color={"gray.500"}
+          color={"principal.100"}
         >
           contato:
         </Text>
@@ -101,19 +100,19 @@ export default function Sobre() {
               Redes sociais
             </Text>
             <Flex mt={'2%'} gap={4}>
-            <AiFillLinkedin fill="white" size={25} />
-            <FaInstagram fill="white" size={25} />
-            <AiFillGithub fill="white" size={25} />
-            <RxDiscordLogo color="white" size={25} />
-            <FaWhatsapp fill="white" size={25} />
-            <TfiEmail fill="white" size={23} />
+            <a target={'_blank'} href="https://www.linkedin.com/in/ryan-oliveira-169a371a4/" rel="noreferrer"><AiFillLinkedin fill="white" size={25} /></a>
+            <a target={'_blank'} href="https://www.instagram.com/ryan.jsx/" rel="noreferrer"><FaInstagram fill="white" size={25} /></a>
+            <a target={'_blank'} href="https://github.com/ryanoliveiragit" rel="noreferrer"><AiFillGithub fill="white" size={25} /></a>
+            <a target={'_blank'} href="https://discord.com/invite/nD3YgMYhre" rel="noreferrer"><RxDiscordLogo color="white" size={25} /></a>
+            <a target={'_blank'} href="https://wa.me/5511945554974" rel="noreferrer"><FaWhatsapp fill="white" size={25} /></a>
+            <a target={'_blank'} href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSDbtnwFGgTJvbqZbCxwmBvSBXlSmbJjWXbHgdFtVhPSVqPqbZlgzdLWhfsJgHNpPgjLSCJK" rel="noreferrer"><TfiEmail fill="white" size={23} /></a>
             </Flex>
             <Text marginTop={'4%'} fontWeight={"600"} color={"gray.100"} fontSize={14}>
               Localização
             </Text>
             <Text color={"gray.500"} fontSize={14} fontWeight={"400"}>
               <a
-                href="https://www.viensoft.com.br/"
+                href="https://www.google.com/maps/place/Suzano+-+Palmeiras+de+S%C3%A3o+Paulo,+Suzano+-+SP/data=!4m2!3m1!1s0x94ce7176a5cf4309:0x7678f276a368e6e2?sa=X&ved=2ahUKEwjI5d2W3qn8AhXyLLkGHQPuDbEQ8gF6BAgIEAE"
                 target="_blank"
                 rel="noreferrer"
               >

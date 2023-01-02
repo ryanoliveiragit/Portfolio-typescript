@@ -31,28 +31,28 @@ const BasicUsage: React.FC<MyAttributes> = ({ closemodal }) => {
         width={"100%"}
         inset={"0px"}
         padding={"14vh 16px 16px"}
-        bgColor={"rgba(0, 0, 0, 0.8)"}
+        bgColor={"#0f0d16d1"}
       ></Box>
       <Box
         top={'2%'}
-        left={"1px"}
+        left={"-0.3rem"}
         width={"100%"}
         fontSize={14}
-        maxWidth={"500px"}
+        maxWidth={"550px"}
         position={"absolute"}
         borderRadius={"35px"}
         fontFamily={"Lexend"}
       >
         <Box
           p={"2%"}
-          background={"rgba(255, 255, 255, 0.068);"}
+          background={"rgb(10, 10, 10);"}
           backdropFilter={"saturate(300%) blur(25px);"}
           pl={3}
           fontWeight={"300"}
           borderRadius={"5px"}
           color={"gray.400"}
           w={"100%"}
-          h={"450px"}
+          h={"490px"}
           overflowY={"scroll"}
         >
           <Text p={2} justifyContent={"space-between"} display={"flex"}>

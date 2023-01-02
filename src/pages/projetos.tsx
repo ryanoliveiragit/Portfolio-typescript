@@ -93,6 +93,9 @@ export default function Sobre() {
   const nlwRocket = repositoreis.filter(
     (repositorys) => repositorys.id == "489555355"
   );
+  const portfolio = repositoreis.filter(
+    (repositorys) => repositorys.id == "581375615"
+  )
   const crud = repositoreis.filter(
     (repositorys) => repositorys.id == "536835745"
   );
@@ -108,10 +111,9 @@ export default function Sobre() {
         <Center display={"column"}>
           <Text
             mt={"5vh"}
-            className={"gradient"}
             fontWeight={"700"}
             fontSize={24}
-            color={"gray.500"}
+            color={"principal.100"}
           >
             Trabalho, hobby & open source.
           </Text>
@@ -278,7 +280,7 @@ export default function Sobre() {
             })}
           </Text>
           <Text color={"gray.500"} fontSize={14}>
-            {nlwRocket.map((repository) => {
+            {portfolio.map((repository) => {
               return (
                 // eslint-disable-next-line react/jsx-key
                 <Box h={"100%"} pl={"4%"} borderLeft={"1px solid white"}>

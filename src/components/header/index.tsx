@@ -67,7 +67,7 @@ export default function Header() {
         fontSize={25}
         fontWeight={700}
         href={'/'}
-        className="logo">
+        color={'principal.100'}>
           {'ryanvs'}
         </Link>
         <Flex
