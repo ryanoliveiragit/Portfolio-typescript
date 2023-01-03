@@ -18,7 +18,6 @@ import useCopyToClipboard from "../components/modal/content/copy";
 import { NextSeo } from "next-seo";
 import { bio } from "../utils/bio";
 
-
 export default function Sobre() {
   useEffect(() => {
     setTimeout(() => {
@@ -39,7 +38,7 @@ export default function Sobre() {
   };
 
   const shortcutsHand = (event: KeyboardEvent) => {
-    if (event.altKey && event.key === "c") {
+    if (event.ctrlKey && event.key === "x") {
       copy("www.ryanvs.dev/");
     }
     if (event.key == "e") {
@@ -56,8 +55,8 @@ export default function Sobre() {
     if (event.key == "p") {
       window.location.href = "/projetos";
     }
-    if (event.altKey && event.key == "s") {
-      window.location.href = "/setup";
+    if (event.altKey && event.key == "c") {
+      window.location.href = "/contato";
     }
     if (event.key == "i") {
       window.open("https://www.instagram.com/ryan.jsx/");
@@ -93,19 +92,19 @@ export default function Sobre() {
   const nlwRocket = repositoreis.filter(
     (repositorys) => repositorys.id == "489555355"
   );
-  const portfolio = repositoreis.filter(
-    (repositorys) => repositorys.id == "581375615"
-  )
+  const noderam = repositoreis.filter(
+    (repositorys) => repositorys.id == "530765405"
+  );
   const crud = repositoreis.filter(
     (repositorys) => repositorys.id == "536835745"
   );
   return (
     <>
-    <NextSeo 
-    title="Projetos - Ryan Oliveira Brito - Front-end Developer"
-    description={bio}
-    canonical='https://www.ryanvs.dev/'
-    />
+      <NextSeo
+        title="Projetos - Ryan Oliveira Brito - Front-end Developer"
+        description={bio}
+        canonical="https://www.ryanvs.dev/"
+      />
       <Header />
       <Container>
         <Center display={"column"}>
@@ -143,7 +142,7 @@ export default function Sobre() {
             {Astethic.map((repository) => {
               return (
                 // eslint-disable-next-line react/jsx-key
-                <Box h={"100%"} pl={"4%"} borderLeft={"1px solid white"}>
+                <Box h={"100%"} pl={"4%"} borderLeft={"1px solid #deff02"}>
                   <Text
                     className="gradientApiGit"
                     fontSize={16}
@@ -171,7 +170,7 @@ export default function Sobre() {
             {Calculadora.map((repository) => {
               return (
                 // eslint-disable-next-line react/jsx-key
-                <Box h={"100%"} pl={"4%"} borderLeft={"1px solid white"}>
+                <Box h={"100%"} pl={"4%"} borderLeft={"1px solid #deff02"}>
                   <Text
                     className="gradientApiGit"
                     fontSize={16}
@@ -199,7 +198,7 @@ export default function Sobre() {
             {crud.map((repository) => {
               return (
                 // eslint-disable-next-line react/jsx-key
-                <Box h={"100%"} pl={"4%"} borderLeft={"1px solid white"}>
+                <Box h={"100%"} pl={"4%"} borderLeft={"1px solid #deff02"}>
                   <Text
                     className="gradientApiGit"
                     fontSize={16}
@@ -227,7 +226,7 @@ export default function Sobre() {
             {NodeRam.map((repository) => {
               return (
                 // eslint-disable-next-line react/jsx-key
-                <Box h={"100%"} pl={"4%"} borderLeft={"1px solid white"}>
+                <Box h={"100%"} pl={"4%"} borderLeft={"1px solid #deff02"}>
                   <Text
                     className="gradientApiGit"
                     fontSize={16}
@@ -255,7 +254,7 @@ export default function Sobre() {
             {nlwRocket.map((repository) => {
               return (
                 // eslint-disable-next-line react/jsx-key
-                <Box h={"100%"} pl={"4%"} borderLeft={"1px solid white"}>
+                <Box h={"100%"} pl={"4%"} borderLeft={"1px solid #deff02"}>
                   <Text
                     className="gradientApiGit"
                     fontSize={16}
@@ -280,10 +279,10 @@ export default function Sobre() {
             })}
           </Text>
           <Text color={"gray.500"} fontSize={14}>
-            {portfolio.map((repository) => {
+            {noderam.map((repository) => {
               return (
                 // eslint-disable-next-line react/jsx-key
-                <Box h={"100%"} pl={"4%"} borderLeft={"1px solid white"}>
+                <Box h={"100%"} pl={"4%"} borderLeft={"1px solid #deff02"}>
                   <Text
                     className="gradientApiGit"
                     fontSize={16}

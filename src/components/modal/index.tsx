@@ -252,7 +252,7 @@ const BasicUsage: React.FC<MyAttributes> = ({ closemodal }) => {
                 fontSize={14}
                 w={"55px"}
               >
-                Alt + S
+                Alt + C
               </Text>
             </Box>
           </Text>

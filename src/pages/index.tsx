@@ -30,7 +30,7 @@ export default function Home() {
     }
   };
   const shortcutsHand = (event: KeyboardEvent) => {
-    if (event.altKey && event.key === "c") {
+    if (event.ctrlKey && event.key === "x") {
       copy("www.ryanvs.dev/");
     }
     if (event.key == "e") {
@@ -47,8 +47,8 @@ export default function Home() {
     if (event.key == "p") {
       window.location.href = "/projetos";
     }
-    if (event.altKey && event.key == "s") {
-      window.location.href = "/setup";
+    if (event.altKey && event.key == "c") {
+      window.location.href = "/contato";
     }
     if (event.key == "i") {
       window.open("https://www.instagram.com/ryan.jsx/");
@@ -125,9 +125,9 @@ export default function Home() {
           w={"100%"}
         >
           <Box mt={"35px"}>
-              {isComponentVisible && (
-                <BasicUsage closemodal={() => handleClickClose()} />
-              )}
+            {isComponentVisible && (
+              <BasicUsage closemodal={() => handleClickClose()} />
+            )}
           </Box>
           <Center fontSize={43}>
             <Stack

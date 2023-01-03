@@ -28,7 +28,7 @@ export default function Sobre() {
   };
 
   const shortcutsHand = (event: KeyboardEvent) => {
-    if (event.altKey && event.key === "c") {
+    if (event.ctrlKey && event.key === "x") {
       copy("www.ryanvs.dev/");
     }
     if (event.key == "e") {
@@ -45,8 +45,8 @@ export default function Sobre() {
     if (event.key == "p") {
       window.location.href = "/projetos";
     }
-    if (event.altKey && event.key == "s") {
-      window.location.href = "/setup";
+    if (event.altKey && event.key == "c") {
+      window.location.href = "/contato";
     }
     if (event.key == "i") {
       window.open("https://www.instagram.com/ryan.jsx/");
@@ -72,13 +72,13 @@ export default function Sobre() {
   }, []);
   return (
     <>
-    <NextSeo 
-    title="Ryan Oliveira Brito - Front-end Developer"
-    description={bio}
-    canonical='https://www.ryanvs.dev/'
-    />
+      <NextSeo
+        title="Ryan Oliveira Brito - Front-end Developer"
+        description={bio}
+        canonical="https://www.ryanvs.dev/"
+      />
       <Header />
-      <Container mt={'13%'} mb={'35vh'}>
+      <Container mt={"13%"} mb={"35vh"}>
         <Text
           alignItems={"left"}
           fontWeight={"700"}
@@ -96,18 +96,64 @@ export default function Sobre() {
         </div>
         <div className="photo">
           <Stack>
-            <Text fontSize={14} m={'2% 0%'} fontWeight={"600"} color={"gray.100"}>
+            <Text
+              fontSize={14}
+              m={"2% 0%"}
+              fontWeight={"600"}
+              color={"gray.100"}
+            >
               Redes sociais
             </Text>
-            <Flex mt={'2%'} gap={4}>
-            <a target={'_blank'} href="https://www.linkedin.com/in/ryan-oliveira-169a371a4/" rel="noreferrer"><AiFillLinkedin fill="white" size={25} /></a>
-            <a target={'_blank'} href="https://www.instagram.com/ryan.jsx/" rel="noreferrer"><FaInstagram fill="white" size={25} /></a>
-            <a target={'_blank'} href="https://github.com/ryanoliveiragit" rel="noreferrer"><AiFillGithub fill="white" size={25} /></a>
-            <a target={'_blank'} href="https://discord.com/invite/nD3YgMYhre" rel="noreferrer"><RxDiscordLogo color="white" size={25} /></a>
-            <a target={'_blank'} href="https://wa.me/5511945554974" rel="noreferrer"><FaWhatsapp fill="white" size={25} /></a>
-            <a target={'_blank'} href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSDbtnwFGgTJvbqZbCxwmBvSBXlSmbJjWXbHgdFtVhPSVqPqbZlgzdLWhfsJgHNpPgjLSCJK" rel="noreferrer"><TfiEmail fill="white" size={23} /></a>
+            <Flex mt={"2%"} gap={4}>
+              <a
+                target={"_blank"}
+                href="https://www.linkedin.com/in/ryan-oliveira-169a371a4/"
+                rel="noreferrer"
+              >
+                <AiFillLinkedin fill="white" size={25} />
+              </a>
+              <a
+                target={"_blank"}
+                href="https://www.instagram.com/ryan.jsx/"
+                rel="noreferrer"
+              >
+                <FaInstagram fill="white" size={25} />
+              </a>
+              <a
+                target={"_blank"}
+                href="https://github.com/ryanoliveiragit"
+                rel="noreferrer"
+              >
+                <AiFillGithub fill="white" size={25} />
+              </a>
+              <a
+                target={"_blank"}
+                href="https://discord.com/invite/nD3YgMYhre"
+                rel="noreferrer"
+              >
+                <RxDiscordLogo color="white" size={25} />
+              </a>
+              <a
+                target={"_blank"}
+                href="https://wa.me/5511945554974"
+                rel="noreferrer"
+              >
+                <FaWhatsapp fill="white" size={25} />
+              </a>
+              <a
+                target={"_blank"}
+                href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSDbtnwFGgTJvbqZbCxwmBvSBXlSmbJjWXbHgdFtVhPSVqPqbZlgzdLWhfsJgHNpPgjLSCJK"
+                rel="noreferrer"
+              >
+                <TfiEmail fill="white" size={23} />
+              </a>
             </Flex>
-            <Text marginTop={'4%'} fontWeight={"600"} color={"gray.100"} fontSize={14}>
+            <Text
+              marginTop={"4%"}
+              fontWeight={"600"}
+              color={"gray.100"}
+              fontSize={14}
+            >
               Localização
             </Text>
             <Text color={"gray.500"} fontSize={14} fontWeight={"400"}>

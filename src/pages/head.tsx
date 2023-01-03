@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react";
 
-import { bio } from '../utils/bio'
+import { bio } from "../utils/bio";
 
 export default function Head() {
   return (
@@ -16,5 +16,5 @@ export default function Head() {
       <meta property="og:type" content="website" />
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     </>
-  )
+  );
 }

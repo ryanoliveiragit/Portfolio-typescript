@@ -12,15 +12,12 @@ export default function Sobre() {
 
   const [isComponentVisible, setIsComponentVisible] = useState(false);
   const handleKeyDown = (event: KeyboardEvent) => {
-    if (event.ctrlKey && event.key === "c") {
-      setIsComponentVisible(true);
+    if (event.ctrlKey && event.key === "x") {
+      copy("www.ryanvs.dev/");
     }
   };
 
   const shortcutsHand = (event: KeyboardEvent) => {
-    if (event.altKey && event.key === "c") {
-      copy("www.ryanvs.dev/");
-    }
     if (event.key == "e") {
       window.open(
         "https://mail.google.com/mail/u/0/#inbox?compose=CllgCJTNqVmWVnQJqKwjHbgqBKcjWVwtgZwfDkfdQMXLXsbgWCRgBSfVfnLRSZVPSfdXnsmMmkL"
@@ -35,8 +32,8 @@ export default function Sobre() {
     if (event.key == "p") {
       window.location.href = "/projetos";
     }
-    if (event.altKey && event.key == "s") {
-      window.location.href = "/setup";
+    if (event.altKey && event.key == "c") {
+      window.location.href = "/contato";
     }
     if (event.key == "i") {
       window.open("https://www.instagram.com/ryan.jsx/");
@@ -79,7 +76,7 @@ export default function Sobre() {
         </Text>
         <Box className="fleximg" w={"100%"}>
           <img
-            src="https://cdn.discordapp.com/attachments/695348516918263819/1057103495800553553/b613fb8e-6283-4612-9eb5-9d5eab03a90a.png"
+            src="https://media.discordapp.net/attachments/695348516918263819/1059601059124887562/ryan-front-end-dev.jpg?width=506&height=575"
             alt=""
           />
           <Stack>
@@ -87,6 +84,7 @@ export default function Sobre() {
               className="flextxt"
               lineHeight={5}
               fontSize={14}
+              mt={"2%"}
               color={"gray.500"}
             >
               <span>Olá,</span> Meu nome é Ryan Oliveira e tenho <span>20</span>{" "}
@@ -134,12 +132,12 @@ export default function Sobre() {
               sou apaixonado por programação e gosto de me aprofundar em
               assuntos variados para entender o motivo das coisas funcionarem.
               Sempre curioso e interessado em aprender mais, busco aprimorar
-              minhas habilidades e conhecimentos constantemente. Atualmente,
-              estou em busca da minha primeira oportunidade como desenvolvedor
-              front-end e estou ansioso para começar a minha carreira nesta área
-              tão desafiadora e gratificante. Acredito que meu espírito curioso
-              e dedicação ao aprendizado constante me ajudarão a enfrentar
-              qualquer desafio que possa surgir no caminho.
+              minhas habilidades e conhecimentos constantemente.
+            </Text>
+            <Text color={"gray.500"} fontSize={14}>
+              Atualmente, estou em busca da minha primeira oportunidade como
+              desenvolvedor front-end e estou ansioso para começar a minha
+              carreira nesta área tão desafiadora e gratificante.
             </Text>
             <Text fontSize={24} fontWeight={"600"} color={"gray.100"}>
               Carreira
