@@ -51,7 +51,7 @@ export default function Home() {
       window.location.href = "/contato";
     }
     if (event.key == "i") {
-      window.open("https://www.instagram.com/ryan.jsx/");
+      window.open("https://www.instagram.com/ryanvs.dev/");
     }
     if (event.key == "g") {
       window.open("https://github.com/ryanoliveiragit");
