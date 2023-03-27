@@ -81,22 +81,22 @@ export default function Sobre() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   const Astethic = repositoreis.filter(
-    (repositorys) => repositorys.id == "520384346"
+    (repositorys) => repositorys.id == "591421421"
   );
-  const Calculadora = repositoreis.filter(
-    (repositorys) => repositorys.id == "496807598"
+  const RocketFeed = repositoreis.filter(
+    (repositorys) => repositorys.id == "586054834"
   );
-  const NodeRam = repositoreis.filter(
-    (repositorys) => repositorys.id == "532382319"
+  const RocketTimer = repositoreis.filter(
+    (repositorys) => repositorys.id == "587723060"
   );
-  const nlwRocket = repositoreis.filter(
-    (repositorys) => repositorys.id == "489555355"
+  const Weather = repositoreis.filter(
+    (repositorys) => repositorys.id == "525926819"
   );
   const noderam = repositoreis.filter(
     (repositorys) => repositorys.id == "530765405"
   );
   const crud = repositoreis.filter(
-    (repositorys) => repositorys.id == "536835745"
+    (repositorys) => repositorys.id == "586285690"
   );
   return (
     <>
@@ -167,7 +167,7 @@ export default function Sobre() {
             })}
           </Text>
           <Text color={"gray.500"} fontSize={14}>
-            {Calculadora.map((repository) => {
+            {RocketFeed.map((repository) => {
               return (
                 // eslint-disable-next-line react/jsx-key
                 <Box h={"100%"} pl={"4%"} borderLeft={"1px solid #deff02"}>
@@ -223,7 +223,7 @@ export default function Sobre() {
             })}
           </Text>
           <Text color={"gray.500"} fontSize={14}>
-            {NodeRam.map((repository) => {
+            {RocketTimer.map((repository) => {
               return (
                 // eslint-disable-next-line react/jsx-key
                 <Box h={"100%"} pl={"4%"} borderLeft={"1px solid #deff02"}>
@@ -251,7 +251,7 @@ export default function Sobre() {
             })}
           </Text>
           <Text color={"gray.500"} fontSize={14}>
-            {nlwRocket.map((repository) => {
+            {Weather.map((repository) => {
               return (
                 // eslint-disable-next-line react/jsx-key
                 <Box h={"100%"} pl={"4%"} borderLeft={"1px solid #deff02"}>
