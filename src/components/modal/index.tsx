@@ -34,7 +34,7 @@ const BasicUsage: React.FC<MyAttributes> = ({ closemodal }) => {
         bgColor={"#0f0d16d1"}
       ></Box>
       <Box
-        top={'2%'}
+        top={"2%"}
         left={"-0.3rem"}
         width={"100%"}
         fontSize={14}
@@ -277,7 +277,13 @@ const BasicUsage: React.FC<MyAttributes> = ({ closemodal }) => {
           >
             <Box gap={2} display={"flex"}>
               <FaInstagram size={20} />
-              <Link href="/setup">Instagram</Link>
+              <Link
+                key={"instagram"}
+                target="_blank"
+                href="https://www.instagram.com/ryanvs.dev/"
+              >
+                Instagram
+              </Link>
             </Box>
             <Box>
               <Text
@@ -304,7 +310,10 @@ const BasicUsage: React.FC<MyAttributes> = ({ closemodal }) => {
           >
             <Box gap={2} display={"flex"}>
               <AiFillGithub size={20} />
-              <Link href="/setup">Github</Link>
+              <Link
+              key={"github"}
+              target="_blank"
+              href="https://github.com/ryanoliveiragit">Github</Link>
             </Box>
             <Box>
               <Text
@@ -331,7 +340,12 @@ const BasicUsage: React.FC<MyAttributes> = ({ closemodal }) => {
           >
             <Box gap={2} display={"flex"}>
               <AiFillLinkedin size={20} />
-              <Link href="/setup">Linkedin</Link>
+              <Link 
+              key={"linkedin"}
+              target="_blank"
+              href="https://www.linkedin.com/in/ryan-oliveira-169a371a4/">
+                Linkedin
+              </Link>
             </Box>
             <Box>
               <Text
@@ -358,7 +372,10 @@ const BasicUsage: React.FC<MyAttributes> = ({ closemodal }) => {
           >
             <Box gap={2} display={"flex"}>
               <RxDiscordLogo size={20} />
-              <Link href="/setup">Discord</Link>
+              <Link 
+              key={"discord"}
+              target="_blank"
+              href="https://discord.com/invite/nD3YgMYhre">Discord</Link>
             </Box>
             <Box>
               <Text
