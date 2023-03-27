@@ -29,7 +29,7 @@ span {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #deff02;;
+  background-color: #996dff;;
   border-radius: 25px;
 }
 
@@ -38,13 +38,13 @@ span {
 }
 
 ::-webkit-scrollbar-thumb:active {
-  background-color: #b7d301;;
+  background-color: #996dff;;
 }
 .highlight:hover {
   cursor: pointer;
   border-radius: 10px;
   transition: 0.4s;
-  color: #deff02;
+  color: #996dff;
 
 }
 .fleximg{
@@ -154,7 +154,7 @@ background-color: #181717e8!important;
   height: 1px;
   bottom: 10px;
   left: 0;
-  background-color: #deff02;
+  background-color: #996dff;
   transform: scaleX(0);
   transform-origin: top left;
   transition: transform 0.3s ease;

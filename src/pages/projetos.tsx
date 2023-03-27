@@ -142,7 +142,7 @@ export default function Sobre() {
             {Astethic.map((repository) => {
               return (
                 // eslint-disable-next-line react/jsx-key
-                <Box h={"100%"} pl={"4%"} borderLeft={"1px solid #deff02"}>
+                <Box h={"100%"} pl={"4%"} borderLeft={"1px solid #996dff"}>
                   <Text
                     className="gradientApiGit"
                     fontSize={16}
@@ -170,7 +170,7 @@ export default function Sobre() {
             {RocketFeed.map((repository) => {
               return (
                 // eslint-disable-next-line react/jsx-key
-                <Box h={"100%"} pl={"4%"} borderLeft={"1px solid #deff02"}>
+                <Box h={"100%"} pl={"4%"} borderLeft={"1px solid #996dff"}>
                   <Text
                     className="gradientApiGit"
                     fontSize={16}
@@ -198,7 +198,7 @@ export default function Sobre() {
             {crud.map((repository) => {
               return (
                 // eslint-disable-next-line react/jsx-key
-                <Box h={"100%"} pl={"4%"} borderLeft={"1px solid #deff02"}>
+                <Box h={"100%"} pl={"4%"} borderLeft={"1px solid #996dff"}>
                   <Text
                     className="gradientApiGit"
                     fontSize={16}
@@ -226,7 +226,7 @@ export default function Sobre() {
             {RocketTimer.map((repository) => {
               return (
                 // eslint-disable-next-line react/jsx-key
-                <Box h={"100%"} pl={"4%"} borderLeft={"1px solid #deff02"}>
+                <Box h={"100%"} pl={"4%"} borderLeft={"1px solid #996dff"}>
                   <Text
                     className="gradientApiGit"
                     fontSize={16}
@@ -254,7 +254,7 @@ export default function Sobre() {
             {Weather.map((repository) => {
               return (
                 // eslint-disable-next-line react/jsx-key
-                <Box h={"100%"} pl={"4%"} borderLeft={"1px solid #deff02"}>
+                <Box h={"100%"} pl={"4%"} borderLeft={"1px solid #996dff"}>
                   <Text
                     className="gradientApiGit"
                     fontSize={16}
@@ -282,7 +282,7 @@ export default function Sobre() {
             {noderam.map((repository) => {
               return (
                 // eslint-disable-next-line react/jsx-key
-                <Box h={"100%"} pl={"4%"} borderLeft={"1px solid #deff02"}>
+                <Box h={"100%"} pl={"4%"} borderLeft={"1px solid #996dff"}>
                   <Text
                     className="gradientApiGit"
                     fontSize={16}

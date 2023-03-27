@@ -142,6 +142,7 @@ export default function Home() {
                 fontWeight={"500"}
                 color={"principal.100"}
                 letterSpacing={-1}
+                textShadow={"5px 5px 100px #673fc5;"}
               >
                 {"Ryan Oliveira"}
               </Text>
